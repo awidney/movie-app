@@ -10,7 +10,7 @@
   }
 
   h2 {
-    @apply font-Inter text-xl tracking-tight;
+    @apply font-Inter text-xl tracking-tight md:text-3xl;
   }
 }
 
@@ -31,4 +31,5 @@
 
 .CircularProgressbar-text {
   font-weight: bold;
+  alignment-baseline: central;
 }
