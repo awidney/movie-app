@@ -3,3 +3,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-white bg-background font-Poppins;
+  }
+
+  h2 {
+    @apply font-Inter text-xl tracking-tight;
+  }
+}
+
+@layer utilities {
+  .h-scroll {
+    overflow-x: scroll;
+  }
+
+  .h-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .h-scroll::-webkit-scrollbar-thumb:horizontal {
+    background-color: #887190; /* accent color */
+    border-radius: 10px;
+  }
+}
+
+.CircularProgressbar-text {
+  font-weight: bold;
+}
