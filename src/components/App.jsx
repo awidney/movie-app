@@ -1,5 +1,11 @@
+import Trending from './Trending';
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello World!</h1>;
+  return (
+    <main className='px-4'>
+      <Trending />
+    </main>
+  );
 }
 
 export default App;
