@@ -28,7 +28,7 @@ function Nav() {
   return (
     <nav className='w-100 mb-4 px-1.5 pt-2 xl:pt-4'>
       <div
-        className={`flex items-center justify-between pr-1.5 xl:justify-around ${
+        className={`mx-auto flex items-center justify-between pr-1.5 xl:w-[67rem] 2xl:w-[87rem] ${
           searchActive ? 'hidden' : ''
         }`}
       >
