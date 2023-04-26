@@ -26,7 +26,7 @@ function Nav() {
   };
 
   return (
-    <nav className='w-100 mb-4 px-1.5 pt-2 xl:pt-4'>
+    <nav className='mb-4 w-full px-1.5 pt-2 xl:pt-4'>
       <div
         className={`mx-auto flex items-center justify-between pr-1.5 xl:w-[67rem] 2xl:w-[87rem] ${
           searchActive ? 'hidden' : ''
@@ -87,12 +87,12 @@ function Nav() {
           <input
             type='text'
             placeholder='Search for movies...'
-            className=' ml-3 flex-grow bg-transparent font-Poppins text-white focus:outline-none'
+            className=' ml-3 w-full flex-grow bg-transparent font-Poppins text-white focus:outline-none'
           />
           <button type='submit'>
             {' '}
             <img
-              className='h-10 w-10'
+              className='min-w-[40px]'
               src='./public/search2.svg'
               alt='Search button'
             />
