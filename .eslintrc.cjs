@@ -17,5 +17,6 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto', jsxSingleQuote: true }],
+    'react/prop-types': 'off',
   },
 };

@@ -1,12 +1,13 @@
 import Nav from './Nav';
-import Footer from './Footer';
+import Trending from './Trending';
 
 function App() {
   return (
     <div>
       <Nav />
-      <main></main>
-      <Footer />
+      <main className='px-4'>
+        <Trending />
+      </main>
     </div>
   );
 }
