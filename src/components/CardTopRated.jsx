@@ -1,6 +1,6 @@
 import RatingBar from './RatingBar';
 
-function CardPopular({ poster, title, releaseDate, rating }) {
+function CardTopRated({ poster, title, releaseDate, rating }) {
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
 
   return (
@@ -21,4 +21,4 @@ function CardPopular({ poster, title, releaseDate, rating }) {
   );
 }
 
-export default CardPopular;
+export default CardTopRated;

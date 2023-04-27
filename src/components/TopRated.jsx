@@ -1,13 +1,13 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import CardPopular from './CardPopular';
+import CardTopRated from './CardTopRated';
 
-function Popular() {
-  const { data: popularMovies } = useQuery({
-    queryKey: 'popularMovies',
+function TopRated() {
+  const { data: topRated } = useQuery({
+    queryKey: 'topRated',
     queryFn: async () => {
       const response = await axios.get(
-        'https://api.themoviedb.org/3/movie/popular?api_key=e1eb6a4fd746d268382a20cd605740a8'
+        'https://api.themoviedb.org/3/movie/top_rated?api_key=e1eb6a4fd746d268382a20cd605740a8'
       );
       return response.data;
     },
@@ -15,11 +15,11 @@ function Popular() {
 
   return (
     <section className='mt-6'>
-      <h2>Popular</h2>
+      <h2>Top Rated</h2>
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
-          {popularMovies?.results.slice(0, 10).map((movie) => (
-            <CardPopular
+          {topRated?.results.slice(0, 10).map((movie) => (
+            <CardTopRated
               key={movie.id}
               title={movie.title}
               poster={movie.backdrop_path}
@@ -33,4 +33,4 @@ function Popular() {
   );
 }
 
-export default Popular;
+export default TopRated;
