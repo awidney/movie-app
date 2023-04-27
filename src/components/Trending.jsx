@@ -14,7 +14,7 @@ function Trending() {
   });
 
   return (
-    <section className='mx-auto my-8 xl:w-[65rem] 2xl:w-[85rem]'>
+    <section>
       <h2>Trending</h2>
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>

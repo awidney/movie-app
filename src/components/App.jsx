@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Nav />
-      <main className='px-4'>
+      <main className='mx-auto my-8 px-4 xl:w-[67.5rem] 2xl:w-[87rem]'>
         <Trending />
         <Popular />
       </main>
