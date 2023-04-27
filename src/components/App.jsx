@@ -2,6 +2,7 @@ import Nav from './Nav';
 import Trending from './Trending';
 import Popular from './Popular';
 import TopRated from './TopRated';
+import NowPlaying from './NowPlaying';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Trending />
         <Popular />
         <TopRated />
+        <NowPlaying />
       </main>
     </div>
   );
