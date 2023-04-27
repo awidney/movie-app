@@ -44,7 +44,7 @@ function Nav() {
           className='hidden h-10 items-center gap-2 pr-1.5 md:inline-flex md:w-[75%] xl:w-[560px] xl:py-6'
           ref={searchRef}
         >
-          <button type='submit' className='pl-4'>
+          <button type='submit' className='ml-4'>
             {' '}
             <img
               className='h-6 w-6'
@@ -81,7 +81,7 @@ function Nav() {
 
       {searchActive && (
         <form
-          className='my-3 flex h-10 items-center gap-2 pr-1.5'
+          className='mb-[40px] mt-[8px] flex h-10 items-center gap-2 pr-1.5'
           ref={searchRef}
         >
           <input
