@@ -34,14 +34,14 @@ function Nav() {
       >
         <a href='/'>
           <img
-            className='h-16 w-16 xl:h-20 xl:w-20'
+            className='w-14 xl:h-20 xl:w-20'
             src='./public/nafilms4.svg'
             alt='NA Films Logo'
           />
         </a>
 
         <form
-          className='-webkit-backdrop-blur-lg my-3 hidden h-10 items-center gap-2 rounded-lg border border-white border-opacity-10 bg-opacity-20 pr-1.5 shadow-md backdrop-blur-lg md:inline-flex md:w-[55%] xl:w-[560px] xl:py-6'
+          className='hidden h-10 items-center gap-2 pr-1.5 md:inline-flex md:w-[75%] xl:w-[560px] xl:py-6'
           ref={searchRef}
         >
           <button type='submit' className='pl-4'>
@@ -56,14 +56,14 @@ function Nav() {
           <input
             type='text'
             placeholder='Search for movies...'
-            className=' ml-3 flex-grow bg-transparent font-Poppins text-white focus:outline-none'
+            className='ml-3 flex-grow bg-transparent font-Poppins text-white focus:outline-none'
           />
         </form>
 
         <div className='flex gap-2'>
           <a href='/'>
             <img
-              className='hover:fill h-10 w-10 xl:h-12 xl:w-12'
+              className='hover:fill w-8 xl:h-12 xl:w-12'
               src='./public/bookmark-add.svg'
               alt='Bookmarks Link'
             />
@@ -71,7 +71,7 @@ function Nav() {
 
           <button onClick={toggleSearch} className='md:hidden'>
             <img
-              className='h-10 w-10'
+              className='w-8'
               src='./public/search2.svg'
               alt='Search button'
             />
@@ -81,18 +81,18 @@ function Nav() {
 
       {searchActive && (
         <form
-          className=' my-3 flex h-10 items-center gap-2 pr-1.5'
+          className='my-3 flex h-10 items-center gap-2 pr-1.5'
           ref={searchRef}
         >
           <input
             type='text'
             placeholder='Search for movies...'
-            className=' ml-3 w-full flex-grow bg-transparent font-Poppins text-white focus:outline-none'
+            className='ml-3 w-full flex-grow bg-transparent font-Poppins text-white focus:outline-none'
           />
           <button type='submit'>
             {' '}
             <img
-              className='min-w-[40px]'
+              className='min-w-[32px]'
               src='./public/search2.svg'
               alt='Search button'
             />
