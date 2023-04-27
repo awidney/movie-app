@@ -3,6 +3,7 @@ import Trending from './Trending';
 import Popular from './Popular';
 import TopRated from './TopRated';
 import NowPlaying from './NowPlaying';
+import Upcoming from './Upcoming';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Popular />
         <TopRated />
         <NowPlaying />
+        <Upcoming />
       </main>
     </div>
   );
