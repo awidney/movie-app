@@ -14,7 +14,7 @@ function CardPopular({ poster, title, releaseDate, rating }) {
       </div>
       <div className='mt-2 max-w-[185px] md:max-w-[300px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
-        <h3 className='font-Poppins text-sm font-bold md:text-xl'>{title}</h3>
+        <h3 className='font-Inter text-sm font-bold md:text-xl'>{title}</h3>
       </div>
       <RatingBar rating={rating} />
     </div>

@@ -14,7 +14,7 @@ function CardTrending({ poster, title, releaseDate, rating }) {
       </div>
       <div className='absolute bottom-0 mb-2 ml-4'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
-        <h3 className='max-w-[240px] font-Poppins text-sm font-bold md:max-w-[470px] md:text-xl'>
+        <h3 className='font-Inter text-sm font-bold md:max-w-[470px] md:text-xl'>
           {title}
         </h3>
       </div>
