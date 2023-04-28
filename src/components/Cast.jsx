@@ -2,7 +2,7 @@ function Cast({ profilePath, name, character }) {
   const profileUrl = `https://image.tmdb.org/t/p/w185${profilePath}`;
 
   return (
-    <div className='cast-item min-w-[120px]'>
+    <div className='grid min-w-[120px] max-w-[120px] grid-rows-[auto_1fr] overflow-hidden'>
       <img
         className='h-36 w-full rounded-t-md object-cover'
         src={profileUrl}
@@ -12,7 +12,7 @@ function Cast({ profilePath, name, character }) {
         <h3 className='font-Inter font-bold leading-snug tracking-tight'>
           {name}
         </h3>
-        <p className='text-xs'>{character}</p>
+        <p className='text-xs lg:text-sm'>{character}</p>
       </div>
     </div>
   );
