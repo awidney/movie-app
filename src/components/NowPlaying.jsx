@@ -16,7 +16,7 @@ function NowPlaying() {
   return (
     <section className='mt-6'>
       <h2>Now Playing</h2>
-      <div className='h-scroll'>
+      <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {nowPlaying?.results.slice(0, 10).map((movie) => (
             <CardNormal
