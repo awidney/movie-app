@@ -1,6 +1,6 @@
 function Genres({ movieInfo }) {
   return (
-    <p className='text-sm'>
+    <p className='text-sm lg:text-base'>
       {movieInfo?.genres.map((genre) => (
         <span
           key={genre.id}
