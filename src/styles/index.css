@@ -14,30 +14,13 @@
   }
 }
 
-@layer components {
-  .CircularProgressbar-text {
-    font-weight: bold;
-    alignment-baseline: central;
-  }
-
-  .cast-item {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    overflow: hidden;
+@layer utilities {
+  .h-scroll {
+    @apply [&::-webkit-scrollbar-thumb:horizontal]:rounded-[10px] [&::-webkit-scrollbar-thumb:horizontal]:bg-accent [&::-webkit-scrollbar]:h-[8px];
   }
 }
 
-@layer utilities {
-  .h-scroll {
-    overflow-x: scroll;
-  }
-
-  .h-scroll::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .h-scroll::-webkit-scrollbar-thumb:horizontal {
-    background-color: #887190; /* accent color */
-    border-radius: 10px;
-  }
+.CircularProgressbar-text {
+  font-weight: bold;
+  alignment-baseline: central;
 }
