@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import CardPopular from './CardPopular';
+import CardNormal from './CardNormal';
 
 function Popular() {
   const { data: popularMovies } = useQuery({
@@ -19,7 +19,7 @@ function Popular() {
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {popularMovies?.results.slice(0, 10).map((movie) => (
-            <CardPopular
+            <CardNormal
               key={movie.id}
               title={movie.title}
               poster={movie.backdrop_path}
