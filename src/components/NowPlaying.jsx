@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import CardNowPlaying from './CardNowPlaying';
+import CardNormal from './CardNormal';
 
 function NowPlaying() {
   const { data: nowPlaying } = useQuery({
@@ -19,7 +19,7 @@ function NowPlaying() {
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {nowPlaying?.results.slice(0, 10).map((movie) => (
-            <CardNowPlaying
+            <CardNormal
               key={movie.id}
               title={movie.title}
               poster={movie.backdrop_path}

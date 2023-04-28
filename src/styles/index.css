@@ -6,11 +6,24 @@
 
 @layer base {
   body {
-    @apply text-white bg-background font-Poppins;
+    @apply bg-background font-Poppins text-white;
   }
 
   h2 {
     @apply font-Inter text-xl tracking-tight md:text-3xl;
+  }
+}
+
+@layer components {
+  .CircularProgressbar-text {
+    font-weight: bold;
+    alignment-baseline: central;
+  }
+
+  .cast-item {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
   }
 }
 
@@ -27,9 +40,4 @@
     background-color: #887190; /* accent color */
     border-radius: 10px;
   }
-}
-
-.CircularProgressbar-text {
-  font-weight: bold;
-  alignment-baseline: central;
 }
