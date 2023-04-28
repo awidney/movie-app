@@ -1,26 +1,24 @@
 import RatingBar from './RatingBar';
 
-function CardTrending({ poster, title, releaseDate, rating }) {
+function CardPopular({ poster, title, releaseDate, rating }) {
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
 
   return (
     <div className='relative my-2 cursor-pointer'>
-      <div className='h-[140px] w-[240px]  md:h-[230px] md:w-[470px]'>
+      <div className='h-[280px] w-[185px] md:h-[460px] md:w-[300px]'>
         <img
           className='h-full w-full rounded-lg object-cover opacity-60'
           src={posterUrl}
           alt={title}
         />
       </div>
-      <div className='absolute bottom-0 mb-2 ml-4'>
+      <div className='mt-2 max-w-[185px] md:max-w-[300px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
-        <h3 className='font-Inter text-sm font-bold md:max-w-[470px] md:text-xl'>
-          {title}
-        </h3>
+        <h3 className='font-Inter text-sm font-bold md:text-xl'>{title}</h3>
       </div>
       <RatingBar rating={rating} />
     </div>
   );
 }
 
-export default CardTrending;
+export default CardPopular;
