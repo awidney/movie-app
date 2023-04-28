@@ -4,6 +4,7 @@ import Popular from './Popular';
 import TopRated from './TopRated';
 import NowPlaying from './NowPlaying';
 import Upcoming from './Upcoming';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <NowPlaying />
         <Upcoming />
       </main>
+      <Footer />
     </div>
   );
 }
