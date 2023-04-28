@@ -1,6 +1,4 @@
-import RatingBar from './RatingBar';
-
-function CardUpcoming({ poster, title, releaseDate, rating }) {
+function CardUpcoming({ poster, title, releaseDate }) {
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
 
   return (
@@ -16,7 +14,6 @@ function CardUpcoming({ poster, title, releaseDate, rating }) {
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
         <h3 className='font-Inter text-sm font-bold md:text-xl'>{title}</h3>
       </div>
-      <RatingBar rating={rating} />
     </div>
   );
 }
