@@ -21,7 +21,7 @@ function Popular() {
           View More
         </a>
       </div>
-      <div className='h-scroll'>
+      <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {popularMovies?.results.slice(0, 10).map((movie) => (
             <CardNormal
