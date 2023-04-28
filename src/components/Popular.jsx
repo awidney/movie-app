@@ -15,7 +15,12 @@ function Popular() {
 
   return (
     <section className='mt-6'>
-      <h2>Popular</h2>
+      <div className='flex items-baseline justify-between'>
+        <h2>Popular</h2>
+        <a className='text-xs text-pink-200 md:text-base' href='/'>
+          View More
+        </a>
+      </div>
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {popularMovies?.results.slice(0, 10).map((movie) => (

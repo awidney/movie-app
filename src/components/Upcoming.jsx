@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import CardNormal from './CardNormal';
+import CardUpcoming from './CardUpcoming';
 
 function Upcoming() {
   const { data: upcomingMovies } = useQuery({
@@ -15,11 +15,16 @@ function Upcoming() {
 
   return (
     <section className='mt-6'>
-      <h2>Upcoming</h2>
+      <div className='flex items-baseline justify-between'>
+        <h2>Upcoming</h2>
+        <a className='text-xs text-pink-200 md:text-base' href='/'>
+          View More
+        </a>
+      </div>
       <div className='h-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
           {upcomingMovies?.results.slice(0, 10).map((movie) => (
-            <CardNormal
+            <CardUpcoming
               key={movie.id}
               title={movie.title}
               poster={movie.backdrop_path}
