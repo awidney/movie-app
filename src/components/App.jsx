@@ -3,6 +3,7 @@ import Nav from './Nav';
 import Footer from './Footer';
 import PageHome from '../pages/PageHome.jsx';
 import PageTrending from '../pages/PageTrending';
+import MovieInfo from '../pages/MovieInfo';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<PageHome />} />
           <Route path='/movie/trending' element={<PageTrending />} />
+          <Route path='/movie/:id/:title' element={<MovieInfo />} />
         </Routes>
       </main>
       <Footer />
