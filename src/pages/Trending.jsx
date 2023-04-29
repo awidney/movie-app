@@ -1,29 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardCategory from '../components/CardCategory';
 
 function PageTrending() {
-  const [moviesToShow, setMoviesToShow] = useState(10);
-  const { data: trendingMovies } = useQuery({
-    queryKey: 'trendingMovies',
-    queryFn: async () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [allMovies, setAllMovies] = useState([]);
+
+  const { data: trendingMovies } = useQuery(
+    ['trendingMovies', currentPage],
+    async () => {
       const response = await axios.get(
-        'https://api.themoviedb.org/3/trending/movie/week?api_key=e1eb6a4fd746d268382a20cd605740a8'
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=e1eb6a4fd746d268382a20cd605740a8&page=${currentPage}`
       );
       return response.data;
     },
-  });
+    { keepPreviousData: true }
+  );
+
+  useEffect(() => {
+    if (trendingMovies?.results) {
+      setAllMovies((prevMovies) => [...prevMovies, ...trendingMovies.results]);
+    }
+  }, [trendingMovies]);
 
   const handleViewMore = () => {
-    setMoviesToShow(moviesToShow + 10);
+    setCurrentPage((prevPage) => prevPage + 1);
   };
 
   return (
     <section>
       <h2>Trending Movies</h2>
       <div className='grid grid-cols-2 gap-4 py-2 categoryGridSmall:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 2xl:gap-10'>
-        {trendingMovies?.results.slice(0, moviesToShow).map((movie) => (
+        {allMovies.map((movie) => (
           <CardCategory
             key={movie.id}
             title={movie.title}
