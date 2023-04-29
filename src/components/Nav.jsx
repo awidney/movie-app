@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   const [searchActive, setSearchActive] = useState(false);
@@ -32,13 +33,13 @@ function Nav() {
           searchActive ? 'hidden' : ''
         }`}
       >
-        <a href='/'>
+        <Link to='/'>
           <img
             className='w-14 xl:h-20 xl:w-20'
             src='./public/nafilms4.svg'
             alt='NA Films Logo'
           />
-        </a>
+        </Link>
 
         <form
           className='hidden h-10 items-center gap-2 pr-1.5 md:inline-flex md:w-[75%] xl:w-[560px] xl:py-6'

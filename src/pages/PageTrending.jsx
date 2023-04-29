@@ -1,7 +1,7 @@
 import React from 'react';
 
 function PageTrending() {
-  return <div>PageTrending</div>;
+  return <div>Test</div>;
 }
 
 export default PageTrending;
