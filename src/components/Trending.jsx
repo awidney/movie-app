@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardTrending from './CardTrending';
+import { Link } from 'react-router-dom';
 
 function Trending() {
   const { data: trendingMovies } = useQuery({
@@ -17,9 +18,12 @@ function Trending() {
     <section>
       <div className='flex items-baseline justify-between'>
         <h2>Trending</h2>
-        <a className='text-xs text-pink-200 md:text-base' href='/'>
+        <Link
+          to='/movie/trending'
+          className='text-xs text-pink-200 md:text-base'
+        >
           View More
-        </a>
+        </Link>
       </div>
       <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
