@@ -30,6 +30,7 @@ function TopRated() {
               poster={movie.backdrop_path}
               releaseDate={movie.release_date.slice(0, 4)} // show the year only
               rating={movie.vote_average.toFixed(1) * 10}
+              id={movie.id}
             />
           ))}
         </div>
