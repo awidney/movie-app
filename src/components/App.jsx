@@ -1,21 +1,18 @@
+import { Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
-import Trending from './Trending';
-import Popular from './Popular';
-import TopRated from './TopRated';
-import NowPlaying from './NowPlaying';
-import Upcoming from './Upcoming';
 import Footer from './Footer';
+import PageHome from '../pages/PageHome.jsx';
+import PageTrending from '../pages/PageTrending';
 
 function App() {
   return (
     <div>
       <Nav />
       <main className='mx-auto my-8 px-4 lg:w-[1024px] xl:w-[67.5rem] 2xl:w-[87rem]'>
-        <Trending />
-        <Popular />
-        <TopRated />
-        <NowPlaying />
-        <Upcoming />
+        <Routes>
+          <Route path='/' element={<PageHome />} />
+          <Route path='/movie/trending' element={<PageTrending />} />
+        </Routes>
       </main>
       <Footer />
     </div>
