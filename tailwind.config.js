@@ -9,6 +9,9 @@ module.exports = {
         Inter: ['Inter', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
       },
+      screens: {
+        categoryGridSmall: '450px',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
