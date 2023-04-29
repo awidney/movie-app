@@ -1,16 +1,19 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import Cast from './Cast';
-import Trailer from './Trailer';
-import Genres from './Genres';
-import SinglePoster from './SinglePoster';
+import Cast from '../components/Cast';
+import Trailer from '../components/Trailer';
+import Genres from '../components/Genres';
+import SinglePoster from '../components/SinglePoster';
+import { useParams } from 'react-router-dom';
 
 function MovieInfo() {
+  const { id } = useParams();
+
   const { data: movieInfo } = useQuery({
     queryKey: 'movieInfo',
     queryFn: async () => {
       const response = await axios.get(
-        'https://api.themoviedb.org/3/movie/324857?api_key=e1eb6a4fd746d268382a20cd605740a8&append_to_response=videos,credits'
+        `https://api.themoviedb.org/3/movie/${id}?api_key=e1eb6a4fd746d268382a20cd605740a8&append_to_response=videos,credits`
       );
       return response.data;
     },
