@@ -2,6 +2,7 @@ import React from 'react';
 import instagramIcon from '../icons/instagram.svg';
 import facebookIcon from '../icons/facebook.svg';
 import twitterIcon from '../icons/twitter.svg';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
           <div className='flex justify-center'>
             <img
               className='h-[3.75rem]'
-              src='./public/nafilms5.svg'
+              src='/nafilms5.svg'
               alt='NA Films Logo'
             />
           </div>
@@ -39,13 +40,13 @@ function Footer() {
           <div>
             <nav>
               <ul className='flex flex-col gap-2'>
-                <a href='/'>
-                  <li>Home</li>
+                <a>
+                  <Link to='/'>Home</Link>
                 </a>
-                <a href='/'>
-                  <li>About</li>
+                <a>
+                  <Link to='/about'>About</Link>
                 </a>
-                <a href='/'>
+                <a>
                   <li>Favourites</li>
                 </a>
               </ul>
@@ -54,21 +55,21 @@ function Footer() {
           <div>
             <nav>
               <ul className='flex flex-col gap-2'>
-                <a href='/'>
+                <Link to='/movie/trending'>
                   <li>Trending</li>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/movie/popular'>
                   <li>Popular</li>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/movie/top-rated'>
                   <li>Top Rated</li>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/movie/now-playing'>
                   <li>Now Playing</li>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/movie/upcoming'>
                   <li>Upcoming</li>
-                </a>
+                </Link>
               </ul>
             </nav>
           </div>

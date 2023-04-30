@@ -6,10 +6,11 @@ import Trending from '../pages/Trending';
 import MovieInfo from '../pages/MovieInfo';
 import ScrollToTop from './ScrollToTop';
 import SearchResults from '../pages/SearchResults';
-// import Popular from '../pages/Popular';
-// import TopRated from '../pages/TopRated';
-// import NowPlaying from '../pages/NowPlaying';
-// import Upcoming from '../pages/Upcoming';
+import Popular from '../pages/Popular';
+import TopRated from '../pages/TopRated';
+import NowPlaying from '../pages/NowPlaying';
+import Upcoming from '../pages/Upcoming';
+import About from '../pages/About';
 
 function App() {
   return (
@@ -20,12 +21,13 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/movie/trending' element={<Trending />} />
-          {/* <Route path='/movie/popular' element={<Popular />} />
+          <Route path='/movie/popular' element={<Popular />} />
           <Route path='/movie/top-rated' element={<TopRated />} />
           <Route path='/movie/now-playing' element={<NowPlaying />} />
-          <Route path='/movie/upcoming' element={<Upcoming />} /> */}
+          <Route path='/movie/upcoming' element={<Upcoming />} />
           <Route path='/movie/:id/:title' element={<MovieInfo />} />
           <Route path='/search' element={<SearchResults />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </main>
       <Footer />

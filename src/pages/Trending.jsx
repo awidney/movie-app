@@ -6,6 +6,7 @@ import CardCategory from '../components/CardCategory';
 function PageTrending() {
   const [currentPage, setCurrentPage] = useState(1);
   const [allMovies, setAllMovies] = useState([]);
+  const [shouldFetch, setShouldFetch] = useState(false);
 
   const { data: trendingMovies } = useQuery(
     ['trendingMovies', currentPage],
@@ -15,7 +16,7 @@ function PageTrending() {
       );
       return response.data;
     },
-    { keepPreviousData: true }
+    { keepPreviousData: true, enabled: shouldFetch }
   );
 
   useEffect(() => {
@@ -23,6 +24,14 @@ function PageTrending() {
       setAllMovies((prevMovies) => [...prevMovies, ...trendingMovies.results]);
     }
   }, [trendingMovies]);
+
+  useEffect(() => {
+    setShouldFetch(true);
+    return () => {
+      setCurrentPage(1);
+      setAllMovies([]);
+    };
+  }, []);
 
   const handleViewMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);

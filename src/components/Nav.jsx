@@ -45,7 +45,7 @@ function Nav() {
         <Link to='/'>
           <img
             className='w-14 xl:h-20 xl:w-20'
-            src='./public/nafilms4.svg'
+            src='/nafilms4.svg'
             alt='NA Films Logo'
           />
         </Link>
@@ -57,11 +57,7 @@ function Nav() {
         >
           <button type='submit' className='ml-4'>
             {' '}
-            <img
-              className='h-6 w-6'
-              src='./public/search2.svg'
-              alt='Search button'
-            />
+            <img className='h-6 w-6' src='/search2.svg' alt='Search button' />
           </button>
 
           <input
@@ -76,17 +72,13 @@ function Nav() {
           <a href='/'>
             <img
               className='hover:fill w-8 xl:h-12 xl:w-12'
-              src='./public/bookmark-add.svg'
+              src='/bookmark-add.svg'
               alt='Bookmarks Link'
             />
           </a>
 
           <button onClick={toggleSearch} className='md:hidden'>
-            <img
-              className='w-8'
-              src='./public/search2.svg'
-              alt='Search button'
-            />
+            <img className='w-8' src='/search2.svg' alt='Search button' />
           </button>
         </div>
       </div>
@@ -107,7 +99,7 @@ function Nav() {
             {' '}
             <img
               className='min-w-[32px]'
-              src='./public/search2.svg'
+              src='/search2.svg'
               alt='Search button'
             />
           </button>
