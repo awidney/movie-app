@@ -9,6 +9,7 @@ import Popular from '../pages/Popular';
 import TopRated from '../pages/TopRated';
 import NowPlaying from '../pages/NowPlaying';
 import Upcoming from '../pages/Upcoming';
+import About from '../pages/About';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/movie/now-playing' element={<NowPlaying />} />
           <Route path='/movie/upcoming' element={<Upcoming />} />
           <Route path='/movie/:id/:title' element={<MovieInfo />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </main>
       <Footer />
