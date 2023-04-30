@@ -11,6 +11,7 @@ import TopRated from '../pages/TopRated';
 import NowPlaying from '../pages/NowPlaying';
 import Upcoming from '../pages/Upcoming';
 import About from '../pages/About';
+import Favourites from '../pages/Favourites';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/movie/:id/:title' element={<MovieInfo />} />
           <Route path='/search' element={<SearchResults />} />
           <Route path='/about' element={<About />} />
+          <Route path='/favourites' element={<Favourites />} />
         </Routes>
       </main>
       <Footer />
