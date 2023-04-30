@@ -14,7 +14,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
       <Link to={`/movie/${id}/${formattedUrlTitle}`}>
         <div className='h-[280px] w-[185px] md:h-[460px] md:w-[300px]'>
           <img
-            className='h-full w-full rounded-lg object-cover opacity-60'
+            className='h-full w-full rounded-lg object-cover'
             src={posterUrl}
             alt={title}
           />
