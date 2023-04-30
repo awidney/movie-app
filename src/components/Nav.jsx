@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Nav() {
   const [searchActive, setSearchActive] = useState(false);
@@ -26,6 +26,15 @@ function Nav() {
     setSearchActive(!searchActive);
   };
 
+  const navigate = useNavigate();
+
+  const goToSearch = (e) => {
+    e.preventDefault(); // prevent page refresh
+    const searchQuery = e.target.searchQuery.value;
+    if (!searchQuery) return; // if searchQuery is empty, do nothing
+    navigate(`/search?language=en-CA&query=${searchQuery}`);
+  };
+
   return (
     <nav className='mb-4 w-full px-1.5 pt-2 xl:pt-4'>
       <div
@@ -42,6 +51,7 @@ function Nav() {
         </Link>
 
         <form
+          onSubmit={goToSearch}
           className='hidden h-10 items-center gap-2 pr-1.5 md:inline-flex md:w-[75%] xl:w-[560px] xl:py-6'
           ref={searchRef}
         >
@@ -56,6 +66,7 @@ function Nav() {
 
           <input
             type='text'
+            name='searchQuery'
             placeholder='Search for movies...'
             className='ml-3 flex-grow bg-transparent font-Poppins text-white focus:outline-none'
           />
@@ -82,11 +93,13 @@ function Nav() {
 
       {searchActive && (
         <form
+          onSubmit={goToSearch}
           className='mb-[40px] mt-[8px] flex h-10 items-center gap-2 pr-1.5'
           ref={searchRef}
         >
           <input
             type='text'
+            name='searchQuery'
             placeholder='Search for movies...'
             className='ml-3 w-full flex-grow bg-transparent font-Poppins text-white focus:outline-none'
           />
