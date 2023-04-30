@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardUpcoming from './CardUpcoming';
+import { Link } from 'react-router-dom';
 
 function Upcoming() {
   const { data: upcomingMovies } = useQuery({
@@ -17,9 +18,12 @@ function Upcoming() {
     <section className='mt-6'>
       <div className='flex items-baseline justify-between'>
         <h2>Upcoming</h2>
-        <a className='text-xs text-pink-200 md:text-base' href='/'>
+        <Link
+          className='text-xs text-pink-200 md:text-base'
+          to='/movie/upcoming'
+        >
           View More
-        </a>
+        </Link>
       </div>
       <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>

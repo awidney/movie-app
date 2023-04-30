@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardNormal from './CardNormal';
+import { Link } from 'react-router-dom';
 
 function TopRated() {
   const { data: topRated } = useQuery({
@@ -17,9 +18,12 @@ function TopRated() {
     <section className='mt-6'>
       <div className='flex items-baseline justify-between'>
         <h2>Top Rated</h2>
-        <a className='text-xs text-pink-200 md:text-base' href='/'>
+        <Link
+          to='/movie/top-rated'
+          className='text-xs text-pink-200 md:text-base'
+        >
           View More
-        </a>
+        </Link>
       </div>
       <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
