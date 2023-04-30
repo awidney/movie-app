@@ -5,6 +5,7 @@ import Home from '../pages/Home.jsx';
 import Trending from '../pages/Trending';
 import MovieInfo from '../pages/MovieInfo';
 import ScrollToTop from './ScrollToTop';
+import SearchResults from '../pages/SearchResults';
 // import Popular from '../pages/Popular';
 // import TopRated from '../pages/TopRated';
 // import NowPlaying from '../pages/NowPlaying';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/movie/now-playing' element={<NowPlaying />} />
           <Route path='/movie/upcoming' element={<Upcoming />} /> */}
           <Route path='/movie/:id/:title' element={<MovieInfo />} />
+          <Route path='/search' element={<SearchResults />} />
         </Routes>
       </main>
       <Footer />
