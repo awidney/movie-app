@@ -12,7 +12,7 @@ function Footer() {
           <div className='flex justify-center'>
             <img
               className='h-[3.75rem]'
-              src='./public/nafilms5.svg'
+              src='/nafilms5.svg'
               alt='NA Films Logo'
             />
           </div>
