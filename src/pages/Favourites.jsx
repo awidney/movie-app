@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import CardCategory from '../components/CardCategory';
+import { API_KEY } from '../global/globals';
 
 function Favourites() {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ function Favourites() {
         const requests = favourites.map((id) =>
           axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
             params: {
-              api_key: 'e1eb6a4fd746d268382a20cd605740a8',
+              api_key: API_KEY,
             },
           })
         );

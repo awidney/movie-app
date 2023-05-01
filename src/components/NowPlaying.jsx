@@ -2,13 +2,14 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardNormal from './CardNormal';
 import { Link } from 'react-router-dom';
+import { API_KEY } from '../global/globals';
 
 function NowPlaying() {
   const { data: nowPlaying } = useQuery({
     queryKey: 'nowPlaying',
     queryFn: async () => {
       const response = await axios.get(
-        'https://api.themoviedb.org/3/movie/now_playing?api_key=e1eb6a4fd746d268382a20cd605740a8'
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
       );
       return response.data;
     },
