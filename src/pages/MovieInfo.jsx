@@ -9,7 +9,11 @@ import { useParams } from 'react-router-dom';
 function MovieInfo() {
   const { id } = useParams();
 
-  const { data: movieInfo } = useQuery({
+  const {
+    data: movieInfo,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: 'movieInfo',
     queryFn: async () => {
       const response = await axios.get(
@@ -19,23 +23,31 @@ function MovieInfo() {
     },
   });
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error fetching movie info</div>;
+  }
+
   let trailerKey = '';
 
-  for (let i = 0; i < movieInfo?.videos.results.length; i++) {
+  for (let i = 0; i < movieInfo.videos.results.length; i++) {
     if (movieInfo.videos.results[i].type === 'Trailer') {
       trailerKey = movieInfo.videos.results[i].key;
       break;
     }
   }
 
-  const runtime = movieInfo?.runtime;
+  const runtime = movieInfo.runtime;
   const hours = Math.floor(runtime / 60);
   const minutes = runtime % 60;
 
   return (
     <div className='relative'>
       <div className='flex justify-between gap-4'>
-        <h1 className='font-Inter text-2xl md:text-4xl'>{movieInfo?.title}</h1>
+        <h1 className='font-Inter text-2xl md:text-4xl'>{movieInfo.title}</h1>
         <img
           className='h-8 w-8'
           src='../../bookmark-add.svg'
@@ -44,7 +56,7 @@ function MovieInfo() {
       </div>
 
       <div className='mt-2 flex gap-4 lg:text-xl'>
-        <p>{movieInfo?.release_date.slice(0, 4)}</p>
+        <p>{movieInfo.release_date.slice(0, 4)}</p>
         <p>{`${hours}h ${minutes}m`}</p>
       </div>
 
@@ -53,14 +65,14 @@ function MovieInfo() {
         <SinglePoster movieInfo={movieInfo} />
         <div className='w-30 flex flex-col gap-4 sm:col-span-2'>
           <Genres movieInfo={movieInfo} />
-          <p className='flex-1 text-sm lg:text-base'>{movieInfo?.overview}</p>
+          <p className='flex-1 text-sm lg:text-base'>{movieInfo.overview}</p>
         </div>
       </div>
 
       <section>
         <h2>Top Billed Cast</h2>
         <div className='h-scroll my-4 flex gap-4 overflow-x-scroll pb-4 pt-2'>
-          {movieInfo?.credits.cast.slice(0, 10).map((cast) => (
+          {movieInfo.credits.cast.slice(0, 10).map((cast) => (
             <Cast
               key={cast.id}
               profilePath={cast.profile_path}
