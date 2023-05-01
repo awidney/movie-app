@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import CardCategory from '../components/CardCategory';
+import { API_KEY } from '../global/globals';
 
 function SearchResults() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,7 +21,7 @@ function SearchResults() {
     ['searchResults', query, currentPage],
     async () => {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=e1eb6a4fd746d268382a20cd605740a8&language=en-CA&query=${query}&page=${currentPage}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-CA&query=${query}&page=${currentPage}`
       );
       return response.data;
     },

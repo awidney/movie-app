@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardCategory from '../components/CardCategory';
+import { API_KEY } from '../global/globals';
 
 function NowPlaying() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,7 +13,7 @@ function NowPlaying() {
     ['popularMovies', currentPage],
     async () => {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=e1eb6a4fd746d268382a20cd605740a8&page=${currentPage}`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${currentPage}`
       );
       return response.data;
     },

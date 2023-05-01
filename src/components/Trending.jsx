@@ -2,13 +2,14 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 import CardTrending from './CardTrending';
 import { Link } from 'react-router-dom';
+import { API_KEY } from '../global/globals';
 
 function Trending() {
   const { data: trendingMovies } = useQuery({
     queryKey: 'trendingMovies',
     queryFn: async () => {
       const response = await axios.get(
-        'https://api.themoviedb.org/3/trending/movie/week?api_key=e1eb6a4fd746d268382a20cd605740a8'
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`
       );
       return response.data;
     },
