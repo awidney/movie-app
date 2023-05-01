@@ -40,36 +40,30 @@ function Footer() {
           <div>
             <nav>
               <ul className='flex flex-col gap-2'>
-                <a>
-                  <Link to='/'>Home</Link>
-                </a>
-                <a>
-                  <Link to='/about'>About</Link>
-                </a>
-                <a>
-                  <li>Favourites</li>
-                </a>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to={'/favourites'}>Favourites</Link>
               </ul>
             </nav>
           </div>
           <div>
             <nav>
               <ul className='flex flex-col gap-2'>
-                <Link to='/movie/trending'>
-                  <li>Trending</li>
-                </Link>
-                <Link to='/movie/popular'>
-                  <li>Popular</li>
-                </Link>
-                <Link to='/movie/top-rated'>
-                  <li>Top Rated</li>
-                </Link>
-                <Link to='/movie/now-playing'>
-                  <li>Now Playing</li>
-                </Link>
-                <Link to='/movie/upcoming'>
-                  <li>Upcoming</li>
-                </Link>
+                <li>
+                  <Link to='/movie/trending'>Trending</Link>
+                </li>
+                <li>
+                  <Link to='/movie/popular'>Popular</Link>
+                </li>
+                <li>
+                  <Link to='/movie/top-rated'>Top Rated</Link>
+                </li>
+                <li>
+                  <Link to='/movie/now-playing'>Now Playing</Link>
+                </li>
+                <li>
+                  <Link to='/movie/upcoming'>Upcoming</Link>
+                </li>
               </ul>
             </nav>
           </div>
