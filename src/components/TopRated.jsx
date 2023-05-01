@@ -27,7 +27,7 @@ function TopRated() {
       </div>
       <div className='h-scroll overflow-x-scroll'>
         <div className='flex min-w-max gap-4 py-2 md:gap-8'>
-          {topRated?.results.slice(0, 10).map((movie) => (
+          {topRated?.results.map((movie) => (
             <CardNormal
               key={movie.id}
               title={movie.title}
