@@ -1,7 +1,27 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function CardNormal({ poster, title, releaseDate, rating, id }) {
+  const [isFavourite, setIsFavourite] = useState(false);
+
+  const toggleFavourite = () => {
+    const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    const index = favourites.indexOf(id);
+    if (index === -1) {
+      favourites.push(id);
+    } else {
+      favourites.splice(index, 1);
+    }
+    localStorage.setItem('favourites', JSON.stringify(favourites));
+    setIsFavourite((prevIsFavourite) => !prevIsFavourite);
+  };
+
+  useEffect(() => {
+    const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    setIsFavourite(favourites.includes(id));
+  }, [id]);
+
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
 
   const formattedUrlTitle = title
@@ -21,11 +41,22 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         </div>
         <RatingBar rating={rating} />
       </Link>
-      <div className='mt-2 max-w-[185px] md:max-w-[300px]'>
+      <div className='relative mt-2 max-w-[185px] md:max-w-[300px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
-        <Link to={`/movie/${id}/${formattedUrlTitle}`}>
+        <Link
+          to={`/movie/${id}/${formattedUrlTitle}`}
+          className='block max-w-[80%]'
+        >
           <h3 className='font-Poppins text-sm font-bold md:text-xl'>{title}</h3>
         </Link>
+        <img
+          onClick={toggleFavourite}
+          className={`absolute right-0 top-0 w-6 filter ${
+            isFavourite ? 'invert' : ''
+          }`}
+          src='../bookmark-add.svg'
+          alt='Add to favourites icon'
+        />
       </div>
     </div>
   );
