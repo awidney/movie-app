@@ -24,7 +24,7 @@ function Footer() {
                 alt='Instagram Logo Link'
               />
             </a>
-            <a className='drop-shadow-2xl' href='https://www.facebook.com'>
+            <a href='https://www.facebook.com'>
               <img
                 className='w-8'
                 src={facebookIcon}
