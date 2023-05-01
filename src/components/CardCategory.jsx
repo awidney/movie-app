@@ -2,26 +2,29 @@ import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-function CardCategory({ poster, title, releaseDate, rating, id }) {
+function CardCategory({
+  poster,
+  title,
+  releaseDate,
+  rating,
+  id,
+  onToggleFavourite,
+}) {
   const [isFavourite, setIsFavourite] = useState(false);
 
   const toggleFavourite = () => {
-    // get favourites from local storage or return an empty array
     const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
     const index = favourites.indexOf(id);
     if (index === -1) {
-      // if movie is not in favourites
       favourites.push(id);
     } else {
-      // if movie is in favourites, remove it
       favourites.splice(index, 1);
     }
-    // save favourites to local storage
     localStorage.setItem('favourites', JSON.stringify(favourites));
-    setIsFavourite((prevIsFavourite) => !prevIsFavourite); // toggle isFavourite
+    setIsFavourite((prevIsFavourite) => !prevIsFavourite);
+    onToggleFavourite && onToggleFavourite();
   };
 
-  // check if movie is in favourites on mount
   useEffect(() => {
     const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
     setIsFavourite(favourites.includes(id));
