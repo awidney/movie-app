@@ -51,7 +51,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         </Link>
         <img
           onClick={toggleFavourite}
-          className={`absolute right-0 top-0 w-6 filter ${
+          className={`absolute right-0 top-0 w-6 filter md:w-7 ${
             isFavourite ? 'invert' : ''
           }`}
           src='../bookmark-add.svg'
