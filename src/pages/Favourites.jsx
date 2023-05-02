@@ -41,7 +41,7 @@ function Favourites() {
   }, [favourites.length, favouritesChanged]);
 
   if (favourites.length === 0) {
-    return <p>No favourite movies yet.</p>;
+    return <h2 className='my-10 text-center'>No favourite movies yet.</h2>;
   }
 
   if (isLoading) {
