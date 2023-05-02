@@ -18,7 +18,7 @@ function BurgerMenu({ isOpen, onClick }) {
 
   return (
     <button
-      className='flex flex-col items-center justify-center rounded-full pt-2 focus:outline-none md:hidden'
+      className='flex flex-col items-center justify-center rounded-full pt-2 focus:outline-none lg:hidden'
       onClick={handleClick}
     >
       <span

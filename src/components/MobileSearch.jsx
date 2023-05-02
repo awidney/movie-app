@@ -14,7 +14,7 @@ function MobileSearch({ onSearch }) {
   };
 
   return (
-    <div className='absolute left-0 z-20 h-[60px] w-full bg-background px-4 pt-2 md:hidden'>
+    <div className='absolute left-0 z-20 h-[60px] w-full bg-background px-4 pt-2 lg:hidden'>
       <form
         className='flex items-center justify-between gap-4'
         onSubmit={goToSearch}
