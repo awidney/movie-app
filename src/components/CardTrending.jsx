@@ -1,5 +1,6 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
+import placeHolder from '../assets/horizontal-placeholder.png';
 
 function CardTrending({ poster, title, releaseDate, rating, id }) {
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
@@ -15,7 +16,7 @@ function CardTrending({ poster, title, releaseDate, rating, id }) {
         <div className='h-[105px] w-[180px] md:h-[170px] md:w-[350px]'>
           <img
             className='h-full w-full rounded-lg object-cover opacity-60'
-            src={posterUrl}
+            src={poster ? posterUrl : placeHolder}
             alt={title}
           />
         </div>
