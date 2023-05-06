@@ -4,6 +4,7 @@ import SvgComponent from './SvgComponent';
 import BurgerMenu from './Burger.jsx';
 import MobileSearch from './MobileSearch';
 import { useNavigate } from 'react-router-dom';
+import '../styles/index.css';
 
 function Nav() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -63,9 +64,9 @@ function Nav() {
           onSubmit={goToSearch}
         >
           <input
-            name='searchQuery' // Add name attribute here
+            name='searchQuery'
             placeholder='Search for movies...'
-            className='w-[300px] flex-grow rounded-md border-2 border-white border-opacity-10  bg-transparent px-3 py-1.5 text-sm transition-all focus:outline-none lg:focus:w-[350px] xl:focus:w-[450px]'
+            className='width-transition w-[300px] flex-grow rounded-md border-2 border-white border-opacity-10 bg-transparent px-3 py-1.5 text-sm focus:outline-none focus:ring-0 lg:focus:w-[350px] xl:focus:w-[450px]'
             type='text'
           />
         </form>
