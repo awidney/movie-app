@@ -69,8 +69,6 @@ function Trending() {
       break;
   }
 
-  // console.log(`Cards: ${maxCards}, Scroll: ${maxScroll}`);
-
   const settings = {
     infinite: false,
     speed: 500,
