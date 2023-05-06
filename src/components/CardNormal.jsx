@@ -31,18 +31,18 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
     .replace(/\s+/g, '-'); // replace spaces with dashes
 
   return (
-    <div className='relative my-2'>
-      <Link to={`/movie/${id}/${formattedUrlTitle}`}>
-        <div className='h-[190px] w-[120px] md:h-[240px] md:w-[180px]'>
+    <div className='my-2'>
+      <Link to={`/movie/${id}/${formattedUrlTitle}`} className='block w-fit'>
+        <div className='relative h-[190px] w-[120px] md:h-[240px] md:w-[180px] lg:w-[190px] 2xl:w-[180px]'>
           <img
-            className='h-full w-full rounded-lg object-cover'
+            className='h-full w-full object-cover'
             src={poster ? posterUrl : placeHolder}
             alt={title}
           />
+          <RatingBar rating={rating} />
         </div>
-        <RatingBar rating={rating} />
       </Link>
-      <div className='relative mt-2 w-[120px] md:w-[180px]'>
+      <div className='relative mt-2 inline-block w-[120px] md:w-[180px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
         <Link
           to={`/movie/${id}/${formattedUrlTitle}`}

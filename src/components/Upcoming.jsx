@@ -3,6 +3,12 @@ import axios from 'axios';
 import CardNormal from '../components/CardNormal';
 import { Link } from 'react-router-dom';
 import { API_KEY } from '../global/globals';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useSlider, useSliderSettings } from '../global/sliderUtils';
+import { SliderLeftButton } from './SliderLeftButton';
+import { SliderRightButton } from './SliderRightButton';
 
 function Upcoming() {
   const { data: upcomingMovies } = useQuery({
@@ -15,19 +21,22 @@ function Upcoming() {
     },
   });
 
+  const { sliderRef, next, previous } = useSlider();
+  const settings = useSliderSettings();
+
   return (
     <section className='mt-6'>
       <div className='flex items-baseline justify-between'>
         <h2>Upcoming</h2>
         <Link
-          className='text-xs text-pink-200 md:text-base'
           to='/movie/upcoming'
+          className='text-xs text-pink-200 md:text-base'
         >
           View More
         </Link>
       </div>
-      <div className='h-scroll overflow-x-scroll'>
-        <div className='flex min-w-max gap-4 py-2 md:gap-8'>
+      <div className='relative w-full'>
+        <Slider {...settings} ref={sliderRef} className='py-2'>
           {upcomingMovies?.results.map((movie) => (
             <CardNormal
               key={movie.id}
@@ -38,7 +47,9 @@ function Upcoming() {
               id={movie.id}
             />
           ))}
-        </div>
+        </Slider>
+        <SliderLeftButton previous={previous} />
+        <SliderRightButton next={next} />
       </div>
     </section>
   );
