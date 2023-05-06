@@ -24,3 +24,11 @@
   font-weight: bold;
   alignment-baseline: central;
 }
+
+.slick-list {
+  height: 100%;
+}
+
+.slider:hover ~ button svg {
+  fill: white;
+}
