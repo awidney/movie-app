@@ -36,7 +36,7 @@ function NowPlaying() {
         </Link>
       </div>
       <div className='relative w-full'>
-        <Slider {...settings} ref={sliderRef} className='py-2'>
+        <Slider {...settings} ref={sliderRef} className='slider py-2'>
           {nowPlaying?.results.map((movie) => (
             <CardNormal
               key={movie.id}

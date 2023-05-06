@@ -91,7 +91,7 @@ function Trending() {
         </Link>
       </div>
       <div className='relative w-full'>
-        <Slider {...settings} ref={sliderRef} className='py-2'>
+        <Slider {...settings} ref={sliderRef} className='slider my-2 h-[180px]'>
           {trendingMovies?.results.map((movie) => (
             <CardTrending
               key={movie.id}
@@ -104,7 +104,7 @@ function Trending() {
           ))}
         </Slider>
         <button
-          className='absolute left-0 top-[100.5px] hidden h-[170px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='absolute left-0 top-[93px] hidden h-[170px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
           onClick={previous}
         >
           <svg
@@ -118,7 +118,7 @@ function Trending() {
           </svg>
         </button>
         <button
-          className='absolute right-0 top-[100.5px] hidden h-[170px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='absolute right-0 top-[93px] hidden h-[170px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
           onClick={next}
         >
           <svg
