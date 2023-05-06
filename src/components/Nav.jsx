@@ -90,7 +90,7 @@ function Nav() {
         </div>
 
         <nav className='hidden pt-2 lg:flex'>
-          <ul className='hidden items-center gap-5 lg:flex'>
+          <ul className='hidden items-center gap-5 text-base lg:flex'>
             <li>
               <Link to='/movie/trending'>Trending</Link>
             </li>
