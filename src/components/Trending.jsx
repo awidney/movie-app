@@ -51,10 +51,6 @@ function Trending() {
       maxCards = 4;
       maxScroll = 4;
       break;
-    case viewportWidth >= 1280:
-      maxCards = 3;
-      maxScroll = 3;
-      break;
     case viewportWidth >= 1024:
       maxCards = 3;
       maxScroll = 3;
