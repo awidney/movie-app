@@ -16,7 +16,7 @@
 
 @layer utilities {
   .h-scroll {
-    @apply [&::-webkit-scrollbar-thumb:horizontal]:rounded-[10px] [&::-webkit-scrollbar-thumb:horizontal]:bg-accent [&::-webkit-scrollbar]:h-[8px];
+    @apply [&::-webkit-scrollbar-thumb:horizontal]:rounded-[10px] [&::-webkit-scrollbar-thumb:horizontal]:bg-accent [&::-webkit-scrollbar]:h-[2px];
   }
 }
 
