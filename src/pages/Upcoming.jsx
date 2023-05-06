@@ -8,6 +8,7 @@ function Upcoming() {
   const [currentPage, setCurrentPage] = useState(1);
   const [allMovies, setAllMovies] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
+  const [totalPages, setTotalPages] = useState(0);
 
   const { data: upcomingMovies } = useQuery(
     ['upcomingMovies', currentPage],
@@ -23,6 +24,7 @@ function Upcoming() {
   useEffect(() => {
     if (upcomingMovies?.results) {
       setAllMovies((prevMovies) => [...prevMovies, ...upcomingMovies.results]);
+      setTotalPages(upcomingMovies.total_pages);
     }
   }, [upcomingMovies]);
 
@@ -31,11 +33,14 @@ function Upcoming() {
     return () => {
       setCurrentPage(1);
       setAllMovies([]);
+      setTotalPages(0);
     };
   }, []);
 
   const handleViewMore = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
   };
 
   return (
@@ -53,12 +58,14 @@ function Upcoming() {
           />
         ))}
       </div>
-      <button
-        className=' mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white'
-        onClick={handleViewMore}
-      >
-        View More
-      </button>
+      {currentPage < totalPages && (
+        <button
+          className='mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white'
+          onClick={handleViewMore}
+        >
+          View More
+        </button>
+      )}
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import placeHolder from '../assets/vertical-placeholder.png';
 
 function CardCategory({
   poster,
@@ -30,7 +31,7 @@ function CardCategory({
     setIsFavourite(favourites.includes(id));
   }, [id]);
 
-  const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
+  const posterUrl = poster ? `https://image.tmdb.org/t/p/w780${poster}` : '';
 
   const formattedUrlTitle = title
     .toLowerCase()
@@ -43,7 +44,7 @@ function CardCategory({
         <div className='relative'>
           <img
             className='h-full w-full rounded-lg object-cover'
-            src={posterUrl}
+            src={posterUrl || placeHolder}
             alt={title}
           />
           <RatingBar rating={rating} />

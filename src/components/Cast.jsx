@@ -1,5 +1,7 @@
-function Cast({ profilePath, name, character }) {
-  const profileUrl = `https://image.tmdb.org/t/p/w185${profilePath}`;
+function Cast({ profilePath, name, character, placeholder }) {
+  const profileUrl = profilePath
+    ? `https://image.tmdb.org/t/p/w185${profilePath}`
+    : placeholder;
 
   return (
     <div className='grid min-w-[120px] max-w-[120px] grid-rows-[auto_1fr] overflow-hidden'>

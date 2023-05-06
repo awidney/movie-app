@@ -10,7 +10,7 @@ function NowPlaying() {
   const [shouldFetch, setShouldFetch] = useState(false);
 
   const { data: nowPlaying } = useQuery(
-    ['popularMovies', currentPage],
+    ['nowPlaying', currentPage], // Fix the query key
     async () => {
       const response = await axios.get(
         `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${currentPage}`

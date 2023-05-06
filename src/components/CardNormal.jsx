@@ -1,6 +1,7 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import placeHolder from '../assets/vertical-placeholder.png';
 
 function CardNormal({ poster, title, releaseDate, rating, id }) {
   const [isFavourite, setIsFavourite] = useState(false);
@@ -35,7 +36,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         <div className='h-[190px] w-[120px] md:h-[240px] md:w-[180px]'>
           <img
             className='h-full w-full rounded-lg object-cover'
-            src={posterUrl}
+            src={poster ? posterUrl : placeHolder}
             alt={title}
           />
         </div>

@@ -6,6 +6,7 @@ import Genres from '../components/Genres';
 import SinglePoster from '../components/SinglePoster';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from '../global/globals';
+import actorPlaceHolder from '../assets/actor-placeholder.png';
 
 function MovieInfo() {
   const { id } = useParams();
@@ -79,6 +80,7 @@ function MovieInfo() {
               profilePath={cast.profile_path}
               name={cast.name}
               character={cast.character}
+              placeholder={actorPlaceHolder}
             />
           ))}
         </div>
