@@ -29,6 +29,10 @@ function PageTrending() {
   useEffect(() => {
     setShouldFetch(true);
     return () => {
+      // Cleanup function only runs when the component is unmounted
+      // and not when the component is re-rendered
+      // Resetting the state only when unmounting the component
+      // helps maintain the correct currentPage value when requesting more pages
       setCurrentPage(1);
       setAllMovies([]);
     };
@@ -54,7 +58,7 @@ function PageTrending() {
         ))}
       </div>
       <button
-        className=' mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white'
+        className='mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white'
         onClick={handleViewMore}
       >
         View More

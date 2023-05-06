@@ -27,7 +27,9 @@ function Popular() {
   }, [popularMovies]);
 
   useEffect(() => {
-    setShouldFetch(true);
+    if (currentPage === 1) {
+      setShouldFetch(true);
+    }
     return () => {
       setCurrentPage(1);
       setAllMovies([]);
@@ -47,7 +49,7 @@ function Popular() {
             key={movie.id}
             title={movie.title}
             poster={movie.poster_path}
-            releaseDate={movie.release_date.slice(0, 4)} // show the year only
+            releaseDate={movie.release_date?.slice(0, 4)} // Use nullish coalescing operator
             rating={movie.vote_average.toFixed(1) * 10}
             id={movie.id}
           />
