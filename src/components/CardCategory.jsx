@@ -43,7 +43,7 @@ function CardCategory({
       <Link to={`/movie/${id}/${formattedUrlTitle}`}>
         <div className='relative'>
           <img
-            className='h-full w-full rounded-lg object-cover'
+            className='h-full w-full object-cover'
             src={posterUrl || placeHolder}
             alt={title}
           />
@@ -60,10 +60,8 @@ function CardCategory({
         </Link>
         <img
           onClick={toggleFavourite}
-          className={`absolute right-0 top-0 w-6 filter ${
-            isFavourite ? 'invert' : ''
-          }`}
-          src='../bookmark-add.svg'
+          className='absolute right-0 top-0 w-6 cursor-pointer'
+          src={isFavourite ? '../fav.svg' : '../add-fav.svg'}
           alt='Add to favourites icon'
         />
       </div>
