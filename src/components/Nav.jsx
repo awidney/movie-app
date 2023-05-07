@@ -43,7 +43,7 @@ function Nav() {
   }, [ref]);
 
   return (
-    <header className='relative mx-auto my-4 px-4 lg:w-[64rem] xl:w-[67.5rem] 2xl:w-[87rem]'>
+    <header className='relative mx-auto mb-8 mt-4 px-4 lg:mb-16 lg:w-[64rem] xl:w-[67.5rem] 2xl:w-[87rem]'>
       <div className='relative flex items-center justify-between overflow-hidden md:gap-4 lg:justify-start'>
         {isSearchOpen && (
           <>
@@ -66,7 +66,7 @@ function Nav() {
           <input
             name='searchQuery'
             placeholder='Search for movies...'
-            className='width-transition w-[300px] flex-grow rounded-md border-2 border-white border-opacity-10 bg-transparent px-3 py-1.5 text-sm focus:outline-none focus:ring-0 lg:focus:w-[350px] xl:focus:w-[450px]'
+            className='width-transition w-[300px] flex-grow rounded-md border-2 border-white border-opacity-30 bg-transparent px-3 py-1.5 text-base focus:outline-none focus:ring-0 lg:focus:w-[350px] xl:focus:w-[450px]'
             type='text'
           />
         </form>
@@ -91,7 +91,7 @@ function Nav() {
         </div>
 
         <nav className='hidden pt-2 lg:flex'>
-          <ul className='hidden items-center gap-5 text-base lg:flex'>
+          <ul className='hidden items-center gap-6 text-base lg:flex'>
             <li>
               <Link to='/movie/trending'>Trending</Link>
             </li>
