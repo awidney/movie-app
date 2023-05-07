@@ -16,7 +16,7 @@ function Footer() {
               alt='NA Films Logo'
             />
           </div>
-          <div className='mt-8 flex justify-between'>
+          <div className='mx-auto mt-8 flex w-[115px] justify-between'>
             <a href='https://www.instagram.com'>
               <img
                 className='w-8'
