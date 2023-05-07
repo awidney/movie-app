@@ -1,5 +1,5 @@
 import * as React from 'react';
-const SvgComponent = (props) => (
+const NAFilmsLogo = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     id='Layer_1'
@@ -51,4 +51,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 );
-export default SvgComponent;
+export default NAFilmsLogo;

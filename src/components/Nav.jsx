@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import SvgComponent from './SvgComponent';
+import NAFilmsLogo from './NAFilmsLogo';
 import BurgerMenu from './Burger.jsx';
 import MobileSearch from './MobileSearch';
 import { useNavigate } from 'react-router-dom';
@@ -56,7 +56,7 @@ function Nav() {
         )}
 
         <Link to='/'>
-          <SvgComponent className='w-9 md:w-11' />
+          <NAFilmsLogo className='w-9 md:w-11' />
         </Link>
 
         <form //tablet form
