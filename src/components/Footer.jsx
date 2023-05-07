@@ -39,16 +39,22 @@ function Footer() {
         <section className='mt-10 flex justify-center gap-12'>
           <div>
             <nav>
-              <ul className='flex flex-col gap-2'>
-                <Link to='/'>Home</Link>
-                <Link to='/about'>About</Link>
-                <Link to={'/favourites'}>Favourites</Link>
+              <ul className='flex flex-col gap-2 lg:text-lg'>
+                <li>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li>
+                  <Link to='/about'>About</Link>
+                </li>
+                <li>
+                  <Link to={'/favourites'}>Favourites</Link>
+                </li>
               </ul>
             </nav>
           </div>
           <div>
             <nav>
-              <ul className='flex flex-col gap-2'>
+              <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
                   <Link to='/movie/trending'>Trending</Link>
                 </li>
