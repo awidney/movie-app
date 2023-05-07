@@ -42,7 +42,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
           <RatingBar rating={rating} />
         </div>
       </Link>
-      <div className='relative inline-block w-[120px] bg-testColor pt-2 md:w-[180px]'>
+      <div className='relative inline-block w-[120px] bg-testColor pt-2 md:w-[180px] lg:w-[190px] 2xl:w-[180px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
         <Link
           to={`/movie/${id}/${formattedUrlTitle}`}
