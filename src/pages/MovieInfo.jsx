@@ -74,15 +74,21 @@ function MovieInfo() {
       <section>
         <h2>Top Billed Cast</h2>
         <div className='h-scroll my-4 flex gap-4 overflow-x-scroll pb-4 pt-2'>
-          {movieInfo.credits.cast.slice(0, 10).map((cast) => (
-            <Cast
-              key={cast.id}
-              profilePath={cast.profile_path}
-              name={cast.name}
-              character={cast.character}
-              placeholder={actorPlaceHolder}
-            />
-          ))}
+          {movieInfo.credits.cast.slice(0, 10).length > 0 ? (
+            movieInfo.credits.cast
+              .slice(0, 10)
+              .map((cast) => (
+                <Cast
+                  key={cast.id}
+                  profilePath={cast.profile_path}
+                  name={cast.name}
+                  character={cast.character}
+                  placeholder={actorPlaceHolder}
+                />
+              ))
+          ) : (
+            <div>To be featured...</div>
+          )}
         </div>
       </section>
     </div>

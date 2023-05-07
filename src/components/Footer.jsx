@@ -9,14 +9,14 @@ function Footer() {
     <footer className='mx-auto my-8 px-4 xl:w-[67.5rem] 2xl:w-[87rem]'>
       <div className='justify-center gap-36 md:flex'>
         <section>
-          <div className='flex justify-center'>
+          <div className='mt-9 flex justify-center'>
             <img
               className='h-[3.75rem]'
               src='/nafilms5.svg'
               alt='NA Films Logo'
             />
           </div>
-          <div className='mt-8 flex justify-center gap-4'>
+          <div className='mt-8 flex justify-between'>
             <a href='https://www.instagram.com'>
               <img
                 className='w-8'
