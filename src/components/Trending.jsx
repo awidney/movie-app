@@ -91,7 +91,11 @@ function Trending() {
         </Link>
       </div>
       <div className='relative w-full'>
-        <Slider {...settings} ref={sliderRef} className='slider my-2 h-[180px]'>
+        <Slider
+          {...settings}
+          ref={sliderRef}
+          className='slider my-2 lg:h-[180px]'
+        >
           {trendingMovies?.results.map((movie) => (
             <CardTrending
               key={movie.id}
