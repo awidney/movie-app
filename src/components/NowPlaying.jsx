@@ -30,7 +30,7 @@ function NowPlaying() {
         <h2>Now Playing</h2>
         <Link
           to='movie/now-playing'
-          className='text-xs text-pink-200 md:text-base'
+          className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
         </Link>

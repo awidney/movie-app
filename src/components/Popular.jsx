@@ -30,7 +30,7 @@ function Popular() {
         <h2>Popular</h2>
         <Link
           to='/movie/popular'
-          className='text-xs text-pink-200 md:text-base'
+          className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
         </Link>

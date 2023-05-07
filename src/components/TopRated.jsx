@@ -30,7 +30,7 @@ function TopRated() {
         <h2>Top Rated</h2>
         <Link
           to='/movie/top-rated'
-          className='text-xs text-pink-200 md:text-base'
+          className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
         </Link>

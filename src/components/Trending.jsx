@@ -80,12 +80,12 @@ function Trending() {
   };
 
   return (
-    <section>
+    <section className='mb-8 lg:mb-16'>
       <div className='flex items-baseline justify-between'>
         <h2>Trending</h2>
         <Link
           to='/movie/trending'
-          className='text-xs text-pink-200 md:text-base'
+          className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
         </Link>

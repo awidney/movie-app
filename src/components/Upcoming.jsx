@@ -30,7 +30,7 @@ function Upcoming() {
         <h2>Upcoming</h2>
         <Link
           to='/movie/upcoming'
-          className='text-xs text-pink-200 md:text-base'
+          className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
         </Link>
