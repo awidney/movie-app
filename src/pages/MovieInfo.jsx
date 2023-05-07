@@ -71,7 +71,7 @@ function MovieInfo() {
         <h1 className='font-Inter text-2xl md:text-4xl'>{movieInfo.title}</h1>
         <img
           onClick={toggleFavourite}
-          className='h-8 w-8 cursor-pointer'
+          className='h-8 w-8 cursor-pointer lg:h-10 lg:w-10'
           src={isFavourite ? '../../fav.svg' : '../../add-fav.svg'}
           alt='Add to favorites button'
         />
