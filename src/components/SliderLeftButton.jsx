@@ -1,7 +1,7 @@
 export function SliderLeftButton({ previous }) {
   return (
     <button
-      className='absolute left-0 top-[136px] hidden h-[240px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+      className='absolute left-0 top-[151px] hidden h-[271px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
       onClick={previous}
     >
       <svg

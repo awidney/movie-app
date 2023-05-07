@@ -33,7 +33,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
   return (
     <div className='my-2'>
       <Link to={`/movie/${id}/${formattedUrlTitle}`} className='block w-fit'>
-        <div className='relative h-[190px] w-[120px] md:h-[240px] md:w-[180px] lg:w-[190px] 2xl:w-[180px]'>
+        <div className='relative h-[190px] w-[120px] md:h-[240px] md:w-[180px] lg:h-[270px] lg:w-[190px] 2xl:w-[180px]'>
           <img
             className='h-full w-full object-cover'
             src={poster ? posterUrl : placeHolder}
@@ -42,7 +42,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
           <RatingBar rating={rating} />
         </div>
       </Link>
-      <div className='relative inline-block w-[120px] bg-testColor pt-2 md:w-[180px] lg:w-[190px] 2xl:w-[180px]'>
+      <div className='relative inline-block w-[120px] pt-2 md:w-[180px] lg:w-[190px] 2xl:w-[180px]'>
         <p className='font-Poppins text-xs md:text-base'>{releaseDate}</p>
         <Link
           to={`/movie/${id}/${formattedUrlTitle}`}
@@ -52,7 +52,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         </Link>
         <img
           onClick={toggleFavourite}
-          className='absolute right-0 top-0 w-6 cursor-pointer'
+          className='absolute right-0 top-[8px] w-6 cursor-pointer'
           src={isFavourite ? '../fav.svg' : '../add-fav.svg'}
           alt='Add to favourites icon'
         />
