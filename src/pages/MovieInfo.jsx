@@ -13,7 +13,9 @@ function MovieInfo() {
   const { id } = useParams();
 
   const [isFavourite, setIsFavourite] = useState(
-    JSON.parse(localStorage.getItem('favourites') || '[]').includes(id)
+    JSON.parse(localStorage.getItem('favourites') || '[]').includes(
+      parseInt(id)
+    )
   );
 
   const {
@@ -31,16 +33,15 @@ function MovieInfo() {
   });
 
   const toggleFavourite = () => {
-    const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');
-    const index = favourites.indexOf(id);
-    if (index !== -1) {
-      favourites.splice(index, 1);
-      setIsFavourite(false);
+    const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    const index = favourites.indexOf(parseInt(id));
+    if (index === -1) {
+      favourites.push(parseInt(id));
     } else {
-      favourites.push(id);
-      setIsFavourite(true);
+      favourites.splice(index, 1);
     }
     localStorage.setItem('favourites', JSON.stringify(favourites));
+    setIsFavourite((prevIsFavourite) => !prevIsFavourite);
   };
 
   if (isLoading) {
