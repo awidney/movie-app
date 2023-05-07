@@ -82,7 +82,7 @@ function MovieInfo() {
       </div>
 
       <div className='mb-16 grid gap-4 sm:grid-cols-[1fr_3fr]'>
-        <Trailer trailerKey={trailerKey} />
+        <Trailer key={trailerKey} trailerKey={trailerKey} />
         <SinglePoster movieInfo={movieInfo} />
         <div className='w-30 flex flex-col gap-4 sm:col-span-2'>
           <Genres movieInfo={movieInfo} />
