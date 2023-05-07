@@ -23,6 +23,7 @@ module.exports = {
         yellow: colors.yellow,
         background: '#10141E',
         accent: '#887190',
+        testColor: '#2B232B',
       },
     },
   },
