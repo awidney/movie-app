@@ -7,9 +7,14 @@ import SinglePoster from '../components/SinglePoster';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from '../global/globals';
 import actorPlaceHolder from '../assets/actor-placeholder.png';
+import { useState } from 'react';
 
 function MovieInfo() {
   const { id } = useParams();
+
+  const [isFavourite, setIsFavourite] = useState(
+    JSON.parse(localStorage.getItem('favourites') || '[]').includes(id)
+  );
 
   const {
     data: movieInfo,
@@ -24,6 +29,19 @@ function MovieInfo() {
       return response.data;
     },
   });
+
+  const toggleFavourite = () => {
+    const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');
+    const index = favourites.indexOf(id);
+    if (index !== -1) {
+      favourites.splice(index, 1);
+      setIsFavourite(false);
+    } else {
+      favourites.push(id);
+      setIsFavourite(true);
+    }
+    localStorage.setItem('favourites', JSON.stringify(favourites));
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -51,8 +69,9 @@ function MovieInfo() {
       <div className='flex justify-between gap-4'>
         <h1 className='font-Inter text-2xl md:text-4xl'>{movieInfo.title}</h1>
         <img
-          className='h-8 w-8'
-          src='../../bookmark-add.svg'
+          onClick={toggleFavourite}
+          className='h-8 w-8 cursor-pointer'
+          src={isFavourite ? '../../fav.svg' : '../../add-fav.svg'}
           alt='Add to favorites button'
         />
       </div>
