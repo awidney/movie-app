@@ -9,6 +9,13 @@ function NowPlaying() {
   const [allMovies, setAllMovies] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
 
+  useEffect(() => {
+    document.title = 'Now Playing - NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
   const { data: nowPlaying } = useQuery(
     ['nowPlaying', currentPage], // Fix the query key
     async () => {

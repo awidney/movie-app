@@ -9,6 +9,13 @@ function Popular() {
   const [allMovies, setAllMovies] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
 
+  useEffect(() => {
+    document.title = 'Popular - NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
   const { data: popularMovies } = useQuery(
     ['popularMovies', currentPage],
     async () => {

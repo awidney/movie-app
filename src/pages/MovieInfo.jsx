@@ -7,7 +7,7 @@ import SinglePoster from '../components/SinglePoster';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from '../global/globals';
 import actorPlaceHolder from '../assets/actor-placeholder.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function MovieInfo() {
   const { id } = useParams();
@@ -21,14 +21,33 @@ function MovieInfo() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: 'movieInfo',
+    queryKey: ['movieInfo', id], // Add the id to the query key
     queryFn: async () => {
       const response = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`
       );
       return response.data;
     },
+    staleTime: 0, // Add this line to set the staleTime to 0
   });
+
+  useEffect(() => {
+    if (isLoading) {
+      document.title = 'Loading Movie - NA Films';
+    } else if (isError) {
+      document.title = 'Error - NA Films';
+    } else if (movieInfo) {
+      const releaseYear = movieInfo.release_date
+        ? movieInfo.release_date.slice(0, 4)
+        : '';
+      const titleYearPart = releaseYear ? ` (${releaseYear})` : '';
+      const movieTitle = movieInfo.title || 'Untitled Movie';
+      document.title = `${movieTitle}${titleYearPart} - NA Films`;
+    }
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, [movieInfo, isLoading, isError]);
 
   const toggleFavourite = () => {
     const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');

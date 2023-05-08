@@ -9,6 +9,13 @@ function TopRated() {
   const [allMovies, setAllMovies] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
 
+  useEffect(() => {
+    document.title = 'Top Rated - NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
   const { data: topRatedMovies } = useQuery(
     ['topRatedMovies', currentPage],
     async () => {
