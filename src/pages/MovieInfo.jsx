@@ -44,10 +44,10 @@ function MovieInfo() {
         : '';
       const titleYearPart = releaseYear ? ` (${releaseYear})` : '';
       const movieTitle = movieInfo.title || 'Untitled Movie';
-      document.title = `${movieTitle}${titleYearPart} — NA Films`;
+      document.title = `${movieTitle}${titleYearPart} — N/A Films`;
     }
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, [movieInfo, isLoading, isError]);
 
