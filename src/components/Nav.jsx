@@ -43,7 +43,7 @@ function Nav() {
   }, [ref]);
 
   return (
-    <header className='relative mx-auto mb-8 mt-4 px-4 lg:mb-16 lg:w-[64rem] xl:w-[67.5rem] 2xl:w-[87rem]'>
+    <header className='relative mb-8 mt-4 px-4 lg:mx-auto lg:mb-16 lg:w-[64rem] xl:w-[67.5rem] 2xl:w-[87rem]'>
       <div className='relative flex items-center justify-between overflow-hidden md:gap-4 lg:justify-start'>
         {isSearchOpen && (
           <>
