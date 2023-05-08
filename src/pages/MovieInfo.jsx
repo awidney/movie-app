@@ -33,16 +33,16 @@ function MovieInfo() {
 
   useEffect(() => {
     if (isLoading) {
-      document.title = 'Loading Movie - NA Films';
+      document.title = 'Loading Movie — NA Films';
     } else if (isError) {
-      document.title = 'Error - NA Films';
+      document.title = 'Error — NA Films';
     } else if (movieInfo) {
       const releaseYear = movieInfo.release_date
         ? movieInfo.release_date.slice(0, 4)
         : '';
       const titleYearPart = releaseYear ? ` (${releaseYear})` : '';
       const movieTitle = movieInfo.title || 'Untitled Movie';
-      document.title = `${movieTitle}${titleYearPart} - NA Films`;
+      document.title = `${movieTitle}${titleYearPart} — NA Films`;
     }
     return () => {
       document.title = 'NA Films';

@@ -10,7 +10,7 @@ function TopRated() {
   const [shouldFetch, setShouldFetch] = useState(false);
 
   useEffect(() => {
-    document.title = 'Top Rated - NA Films';
+    document.title = 'Top Rated — NA Films';
     return () => {
       document.title = 'NA Films';
     };

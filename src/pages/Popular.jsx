@@ -10,7 +10,7 @@ function Popular() {
   const [shouldFetch, setShouldFetch] = useState(false);
 
   useEffect(() => {
-    document.title = 'Popular - NA Films';
+    document.title = 'Popular — NA Films';
     return () => {
       document.title = 'NA Films';
     };

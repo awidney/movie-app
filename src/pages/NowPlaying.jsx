@@ -10,7 +10,7 @@ function NowPlaying() {
   const [shouldFetch, setShouldFetch] = useState(false);
 
   useEffect(() => {
-    document.title = 'Now Playing - NA Films';
+    document.title = 'Now Playing — NA Films';
     return () => {
       document.title = 'NA Films';
     };

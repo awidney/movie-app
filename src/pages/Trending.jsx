@@ -10,7 +10,7 @@ function PageTrending() {
   const [shouldFetch, setShouldFetch] = useState(false);
 
   useEffect(() => {
-    document.title = 'Trending - NA Films';
+    document.title = 'Trending — NA Films';
     return () => {
       document.title = 'NA Films';
     };
