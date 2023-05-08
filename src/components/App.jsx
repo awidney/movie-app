@@ -12,6 +12,7 @@ import NowPlaying from '../pages/NowPlaying';
 import Upcoming from '../pages/Upcoming';
 import About from '../pages/About';
 import Favourites from '../pages/Favourites';
+import ScrollToTopButton from './ScrollToTopButton';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
