@@ -15,10 +15,10 @@ import Favourites from '../pages/Favourites';
 
 function App() {
   return (
-    <div>
+    <div className='flex h-screen flex-col'>
       <Nav />
       <ScrollToTop />
-      <main className='mx-auto px-4 lg:w-[1024px] xl:w-[67.5rem] 2xl:w-[87rem]'>
+      <main className='flex-1 px-4 lg:mx-auto lg:w-[1024px] xl:w-[67.5rem] 2xl:w-[87rem]'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/movie/trending' element={<Trending />} />
