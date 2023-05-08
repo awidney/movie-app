@@ -77,10 +77,14 @@ function MovieInfo() {
         />
       </div>
 
-      <div className='mt-2 flex gap-4 lg:text-xl'>
-        <p>{movieInfo.release_date.slice(0, 4)}</p>
-        <p>{`${hours}h ${minutes}m`}</p>
-      </div>
+      {movieInfo.release_date || runtime ? (
+        <div className='mt-2 flex gap-4 lg:text-xl'>
+          {movieInfo.release_date && (
+            <p>{movieInfo.release_date.slice(0, 4)}</p>
+          )}
+          {runtime !== 0 && <p>{`${hours}h ${minutes}m`}</p>}
+        </div>
+      ) : null}
 
       <div className='mb-16 grid gap-4 sm:grid-cols-[1fr_3fr]'>
         <Trailer key={trailerKey} trailerKey={trailerKey} />
