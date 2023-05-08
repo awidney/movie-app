@@ -14,7 +14,7 @@ function SearchResults() {
 
   useEffect(() => {
     if (query) {
-      document.title = `${query} — NA Films`;
+      document.title = `${query} — N/A Films`;
     } else {
       document.title = 'N/A Films';
     }
