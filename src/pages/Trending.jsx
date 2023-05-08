@@ -9,6 +9,13 @@ function PageTrending() {
   const [allMovies, setAllMovies] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
 
+  useEffect(() => {
+    document.title = 'Trending — NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
   const { data: trendingMovies } = useQuery(
     ['trendingMovies', currentPage],
     async () => {

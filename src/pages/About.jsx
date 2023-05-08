@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function About() {
+  useEffect(() => {
+    document.title = 'About — NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
   return (
     <section>
       <h2 className='text-center'>About</h2>

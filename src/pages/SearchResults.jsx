@@ -13,6 +13,17 @@ function SearchResults() {
   const query = searchParams.get('query');
 
   useEffect(() => {
+    if (query) {
+      document.title = `${query} — NA Films`;
+    } else {
+      document.title = 'NA Films';
+    }
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
+  useEffect(() => {
     setCurrentPage(1);
     setAllMovies([]);
   }, [query]);

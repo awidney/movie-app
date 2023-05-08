@@ -10,6 +10,13 @@ function Upcoming() {
   const [shouldFetch, setShouldFetch] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
 
+  useEffect(() => {
+    document.title = 'Upcoming — NA Films';
+    return () => {
+      document.title = 'NA Films';
+    };
+  }, []);
+
   const { data: upcomingMovies } = useQuery(
     ['upcomingMovies', currentPage],
     async () => {
