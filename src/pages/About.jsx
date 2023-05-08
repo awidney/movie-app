@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 
 function About() {
   useEffect(() => {
-    document.title = 'About — NA Films';
+    document.title = 'About — N/A Films';
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, []);
   return (

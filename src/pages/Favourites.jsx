@@ -11,9 +11,9 @@ function Favourites() {
   const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
 
   useEffect(() => {
-    document.title = 'Favourites — NA Films';
+    document.title = 'Favourites — N/A Films';
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, []);
 

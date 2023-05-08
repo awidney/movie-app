@@ -7,9 +7,9 @@ import Upcoming from '../components/Upcoming';
 
 function PageHome() {
   useEffect(() => {
-    document.title = 'NA Films';
+    document.title = 'N/A Films';
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, []);
   return (

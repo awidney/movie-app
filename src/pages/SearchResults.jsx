@@ -16,10 +16,10 @@ function SearchResults() {
     if (query) {
       document.title = `${query} — NA Films`;
     } else {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     }
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, []);
 

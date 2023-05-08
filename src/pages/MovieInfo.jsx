@@ -35,9 +35,9 @@ function MovieInfo() {
 
   useEffect(() => {
     if (isLoading) {
-      document.title = 'Loading Movie — NA Films';
+      document.title = 'Loading Movie — N/A Films';
     } else if (isError) {
-      document.title = 'Error — NA Films';
+      document.title = 'Error — N/A Films';
     } else if (movieInfo) {
       const releaseYear = movieInfo.release_date
         ? movieInfo.release_date.slice(0, 4)

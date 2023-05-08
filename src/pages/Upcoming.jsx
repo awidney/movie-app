@@ -11,9 +11,9 @@ function Upcoming() {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    document.title = 'Upcoming — NA Films';
+    document.title = 'Upcoming — N/A Films';
     return () => {
-      document.title = 'NA Films';
+      document.title = 'N/A Films';
     };
   }, []);
 
