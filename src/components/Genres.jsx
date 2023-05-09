@@ -4,7 +4,7 @@ function Genres({ movieInfo }) {
       {movieInfo?.genres.map((genre) => (
         <span
           key={genre.id}
-          className='mb-2 mr-2 inline-block flex-1 rounded-full border border-accent px-2 py-[2px]'
+          className='mb-2 mr-2 inline-block flex-1 rounded-full border border-accent px-2 py-[0.125rem]'
         >
           {genre.name}
         </span>

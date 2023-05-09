@@ -108,7 +108,7 @@ function Trending() {
           ))}
         </Slider>
         <button
-          className='absolute left-0 top-[93px] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='absolute left-0 top-[5.8125rem] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
           onClick={previous}
         >
           <svg
@@ -122,7 +122,7 @@ function Trending() {
           </svg>
         </button>
         <button
-          className='absolute right-0 top-[93px] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='absolute right-0 top-[5.8125rem] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
           onClick={next}
         >
           <svg

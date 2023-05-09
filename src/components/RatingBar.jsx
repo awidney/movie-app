@@ -11,7 +11,7 @@ function RatingBar({ rating }) {
         background
         styles={buildStyles({
           textColor: '#fff',
-          textSize: '32px',
+          textSize: '2rem',
           pathColor: '#887190',
           trailColor: '#fff',
           backgroundColor: '#10141E',

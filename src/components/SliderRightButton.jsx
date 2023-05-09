@@ -1,7 +1,7 @@
 export function SliderRightButton({ next }) {
   return (
     <button
-      className='absolute right-0 top-[151px] hidden h-[271px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+      className='absolute right-0 top-[9.4375rem] hidden h-[271px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
       onClick={next}
     >
       <svg
