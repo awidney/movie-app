@@ -1,7 +1,4 @@
 import React from 'react';
-import instagramIcon from '../icons/instagram.svg';
-import facebookIcon from '../icons/facebook.svg';
-import twitterIcon from '../icons/twitter.svg';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -20,19 +17,19 @@ function Footer() {
             <a href='https://www.instagram.com'>
               <img
                 className='w-8'
-                src={instagramIcon}
+                src='/instagram.svg'
                 alt='Instagram Logo Link'
               />
             </a>
             <a href='https://www.facebook.com'>
               <img
                 className='w-8'
-                src={facebookIcon}
+                src='/facebook.svg'
                 alt='Facebook Logo Link'
               />
             </a>
             <a href='https://www.twitter.com'>
-              <img className='w-8' src={twitterIcon} alt='Twitter Logo Link' />
+              <img className='w-8' src='/twitter.svg' alt='Twitter Logo Link' />
             </a>
           </div>
         </section>
