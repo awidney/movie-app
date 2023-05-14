@@ -31,6 +31,7 @@ function App() {
           <Route path='/search' element={<SearchResults />} />
           <Route path='/about' element={<About />} />
           <Route path='/favourites' element={<Favourites />} />
+          <Route path='*' element={<Home />} />
         </Routes>
       </main>
       <Footer />
