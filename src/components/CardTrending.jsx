@@ -11,7 +11,7 @@ function CardTrending({ poster, title, releaseDate, rating, id }) {
     .replace(/\s+/g, '-'); // replace spaces with dashes
 
   return (
-    <Link to={`/nafilms/movie/${id}/${formattedUrlTitle}`}>
+    <Link to={`/movie/${id}/${formattedUrlTitle}`}>
       <div className='relative my-2 inline-block w-[180px] cursor-pointer md:w-auto'>
         <div className='h-[105px] md:h-[170px] md:w-[325px]'>
           <img

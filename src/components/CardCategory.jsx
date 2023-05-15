@@ -40,7 +40,7 @@ function CardCategory({
 
   return (
     <div>
-      <Link to={`/nafilms/movie/${id}/${formattedUrlTitle}`}>
+      <Link to={`/movie/${id}/${formattedUrlTitle}`}>
         <div className='relative'>
           <img
             className='h-full w-full object-cover'

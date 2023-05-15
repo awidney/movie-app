@@ -33,7 +33,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
   return (
     <div className='my-2'>
       <Link
-        to={`/nafilms/movie/${id}/${formattedUrlTitle}`}
+        to={`/movie/${id}/${formattedUrlTitle}`}
         className='block w-fit'
       >
         <div className='relative h-[190px] w-[120px] md:h-[240px] md:w-[180px] lg:h-[270px] lg:w-[190px] 2xl:w-[180px]'>

@@ -41,10 +41,10 @@ function Footer() {
                   <Link to='/nafilms'>Home</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/about'>About</Link>
+                  <Link to='/about'>About</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/favourites'>Favourites</Link>
+                  <Link to='/favourites'>Favourites</Link>
                 </li>
               </ul>
             </nav>
@@ -53,19 +53,19 @@ function Footer() {
             <nav>
               <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
-                  <Link to='/nafilms/movie/trending'>Trending</Link>
+                  <Link to='/movie/trending'>Trending</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/movie/popular'>Popular</Link>
+                  <Link to='/movie/popular'>Popular</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/movie/top-rated'>Top Rated</Link>
+                  <Link to='/movie/top-rated'>Top Rated</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/movie/now-playing'>Now Playing</Link>
+                  <Link to='/movie/now-playing'>Now Playing</Link>
                 </li>
                 <li>
-                  <Link to='/nafilms/movie/upcoming'>Upcoming</Link>
+                  <Link to='/movie/upcoming'>Upcoming</Link>
                 </li>
               </ul>
             </nav>

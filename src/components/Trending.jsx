@@ -84,7 +84,7 @@ function Trending() {
       <div className='flex items-baseline justify-between'>
         <h2>Trending</h2>
         <Link
-          to='/nafilms/movie/trending'
+          to='/movie/trending'
           className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More

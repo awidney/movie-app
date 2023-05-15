@@ -29,7 +29,7 @@ function Popular() {
       <div className='flex items-baseline justify-between'>
         <h2>Popular</h2>
         <Link
-          to='/nafilms/movie/popular'
+          to='/movie/popular'
           className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
