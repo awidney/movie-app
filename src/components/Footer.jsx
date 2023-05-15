@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PUBLIC_URL } from '../global/globals';
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
           <div className='mt-9 flex justify-center'>
             <img
               className='h-[3.75rem]'
-              src='nafilms5.svg'
+              src={`${PUBLIC_URL}nafilms5.svg`}
               alt='NA Films Logo'
             />
           </div>
@@ -17,19 +18,23 @@ function Footer() {
             <a href='https://www.instagram.com'>
               <img
                 className='w-8'
-                src='instagram.svg'
+                src={`${PUBLIC_URL}instagram.svg`}
                 alt='Instagram Logo Link'
               />
             </a>
             <a href='https://www.facebook.com'>
               <img
                 className='w-8'
-                src='facebook.svg'
+                src={`${PUBLIC_URL}facebook.svg`}
                 alt='Facebook Logo Link'
               />
             </a>
             <a href='https://www.twitter.com'>
-              <img className='w-8' src='twitter.svg' alt='Twitter Logo Link' />
+              <img
+                className='w-8'
+                src={`${PUBLIC_URL}twitter.svg`}
+                alt='Twitter Logo Link'
+              />
             </a>
           </div>
         </section>
