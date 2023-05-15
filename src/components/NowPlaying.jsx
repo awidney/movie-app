@@ -29,7 +29,7 @@ function NowPlaying() {
       <div className='flex items-baseline justify-between'>
         <h2>Now Playing</h2>
         <Link
-          to='nafilms/movie/now-playing'
+          to='/nafilms/movie/now-playing'
           className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
