@@ -29,7 +29,7 @@ function Upcoming() {
       <div className='flex items-baseline justify-between'>
         <h2>Upcoming</h2>
         <Link
-          to='/movie/upcoming'
+          to='nafilms/movie/upcoming'
           className='text-xs text-pink-200 md:text-base xl:text-lg'
         >
           View More
