@@ -55,7 +55,7 @@ function Nav() {
           </>
         )}
 
-        <Link to='/'>
+        <Link to='/nafilms'>
           <NAFilmsLogo className='w-9 md:w-11' />
         </Link>
 
@@ -93,25 +93,25 @@ function Nav() {
         <nav className='hidden pt-2 lg:flex'>
           <ul className='hidden items-center gap-6 text-base lg:flex'>
             <li>
-              <Link to='/movie/trending'>Trending</Link>
+              <Link to='/nafilms/movie/trending'>Trending</Link>
             </li>
             <li>
-              <Link to='/movie/popular'>Popular</Link>
+              <Link to='/nafilms/movie/popular'>Popular</Link>
             </li>
             <li>
-              <Link to='/movie/top-rated'>Top Rated</Link>
+              <Link to='/nafilms/movie/top-rated'>Top Rated</Link>
             </li>
             <li>
-              <Link to='/movie/now-playing'>Now Playing</Link>
+              <Link to='/nafilms/movie/now-playing'>Now Playing</Link>
             </li>
             <li>
-              <Link to='/movie/upcoming'>Upcoming</Link>
+              <Link to='/nafilms/movie/upcoming'>Upcoming</Link>
             </li>
           </ul>
         </nav>
 
         <Link
-          to='/favourites'
+          to='/nafilms/favourites'
           className='absolute right-0 top-[27%] hidden lg:block'
         >
           <svg
@@ -129,25 +129,28 @@ function Nav() {
 
       {isBurgerMenuOpen && (
         <nav className='absolute left-0 right-0 z-10 w-full rounded-lg bg-background px-4 py-8 lg:hidden'>
-          <Link to='/movie/trending' className='mb-2 block'>
+          <Link to='/nafilms/movie/trending' className='mb-2 block'>
             Trending
           </Link>
-          <Link to='/movie/popular' className='mb-2 block'>
+          <Link to='/nafilms/movie/popular' className='mb-2 block'>
             Popular
           </Link>
-          <Link to='/movie/top-rated' className='mb-2 block'>
+          <Link to='/nafilms/movie/top-rated' className='mb-2 block'>
             Top Rated
           </Link>
-          <Link to='/movie/now-playing' className='mb-2 block'>
+          <Link to='/nafilms/movie/now-playing' className='mb-2 block'>
             Now Playing
           </Link>
-          <Link to='/movie/upcoming' className='mb-4 block'>
+          <Link to='/nafilms/movie/upcoming' className='mb-4 block'>
             Upcoming
           </Link>
-          <Link to='/favourites' className='mb-2 block border-t-2 pt-4 text-sm'>
+          <Link
+            to='/nafilms/favourites'
+            className='mb-2 block border-t-2 pt-4 text-sm'
+          >
             Favourites
           </Link>
-          <Link to='/about' className='mb-2 block text-sm'>
+          <Link to='/nafilms/about' className='mb-2 block text-sm'>
             About
           </Link>
         </nav>

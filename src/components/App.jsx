@@ -21,16 +21,16 @@ function App() {
       <ScrollToTop />
       <main className='flex-1 px-4 lg:mx-auto lg:w-[1024px] xl:w-[67.5rem] 2xl:w-[87rem]'>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/movie/trending' element={<Trending />} />
-          <Route path='/movie/popular' element={<Popular />} />
-          <Route path='/movie/top-rated' element={<TopRated />} />
-          <Route path='/movie/now-playing' element={<NowPlaying />} />
-          <Route path='/movie/upcoming' element={<Upcoming />} />
-          <Route path='/movie/:id/:title' element={<MovieInfo />} />
-          <Route path='/search' element={<SearchResults />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/favourites' element={<Favourites />} />
+          <Route path='/nafilms' element={<Home />} />
+          <Route path='/nafilms/movie/trending' element={<Trending />} />
+          <Route path='/nafilms/movie/popular' element={<Popular />} />
+          <Route path='/nafilms/movie/top-rated' element={<TopRated />} />
+          <Route path='/nafilms/movie/now-playing' element={<NowPlaying />} />
+          <Route path='/nafilms/movie/upcoming' element={<Upcoming />} />
+          <Route path='/nafilms/movie/:id/:title' element={<MovieInfo />} />
+          <Route path='/nafilms/search' element={<SearchResults />} />
+          <Route path='/nafilms/about' element={<About />} />
+          <Route path='/nafilms/favourites' element={<Favourites />} />
           <Route path='*' element={<Home />} />
         </Routes>
       </main>

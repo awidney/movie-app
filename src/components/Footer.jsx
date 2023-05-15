@@ -9,7 +9,7 @@ function Footer() {
           <div className='mt-9 flex justify-center'>
             <img
               className='h-[3.75rem]'
-              src='/nafilms5.svg'
+              src='nafilms5.svg'
               alt='NA Films Logo'
             />
           </div>
@@ -17,19 +17,19 @@ function Footer() {
             <a href='https://www.instagram.com'>
               <img
                 className='w-8'
-                src='/instagram.svg'
+                src='instagram.svg'
                 alt='Instagram Logo Link'
               />
             </a>
             <a href='https://www.facebook.com'>
               <img
                 className='w-8'
-                src='/facebook.svg'
+                src='facebook.svg'
                 alt='Facebook Logo Link'
               />
             </a>
             <a href='https://www.twitter.com'>
-              <img className='w-8' src='/twitter.svg' alt='Twitter Logo Link' />
+              <img className='w-8' src='twitter.svg' alt='Twitter Logo Link' />
             </a>
           </div>
         </section>
@@ -38,13 +38,13 @@ function Footer() {
             <nav>
               <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link to='/nafilms'>Home</Link>
                 </li>
                 <li>
-                  <Link to='/about'>About</Link>
+                  <Link to='/nafilms/about'>About</Link>
                 </li>
                 <li>
-                  <Link to={'/favourites'}>Favourites</Link>
+                  <Link to='/nafilms/favourites'>Favourites</Link>
                 </li>
               </ul>
             </nav>
@@ -53,19 +53,19 @@ function Footer() {
             <nav>
               <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
-                  <Link to='/movie/trending'>Trending</Link>
+                  <Link to='/nafilms/movie/trending'>Trending</Link>
                 </li>
                 <li>
-                  <Link to='/movie/popular'>Popular</Link>
+                  <Link to='/nafilms/movie/popular'>Popular</Link>
                 </li>
                 <li>
-                  <Link to='/movie/top-rated'>Top Rated</Link>
+                  <Link to='/nafilms/movie/top-rated'>Top Rated</Link>
                 </li>
                 <li>
-                  <Link to='/movie/now-playing'>Now Playing</Link>
+                  <Link to='/nafilms/movie/now-playing'>Now Playing</Link>
                 </li>
                 <li>
-                  <Link to='/movie/upcoming'>Upcoming</Link>
+                  <Link to='/nafilms/movie/upcoming'>Upcoming</Link>
                 </li>
               </ul>
             </nav>

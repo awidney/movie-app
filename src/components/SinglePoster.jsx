@@ -1,7 +1,8 @@
 import RatingBar from './RatingBar';
-import placeHolder from '../assets/vertical-placeholder.png';
+import { PUBLIC_URL } from '../global/globals';
 
 function SinglePoster({ movieInfo }) {
+  const placeHolder = `${PUBLIC_URL}assets/vertical-placeholder.png`;
   const posterUrl = 'https://image.tmdb.org/t/p/w780';
   const imageUrl = movieInfo?.poster_path
     ? `${posterUrl}${movieInfo.poster_path}`

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-
+import { PUBLIC_URL } from '../global/globals';
 function About() {
+  const publicURL = PUBLIC_URL;
   useEffect(() => {
     document.title = 'About — N/A Films';
     return () => {
@@ -25,7 +26,7 @@ function About() {
         TMDb.
         <img
           className='mx-auto mt-5 w-16'
-          src='/tmdbicon.svg'
+          src={`${publicURL}tmdbicon.svg`}
           alt='TMDB Icon'
         />
       </p>

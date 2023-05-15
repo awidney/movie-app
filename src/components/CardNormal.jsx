@@ -1,11 +1,11 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import placeHolder from '../assets/vertical-placeholder.png';
+import { PUBLIC_URL } from '../global/globals';
 
 function CardNormal({ poster, title, releaseDate, rating, id }) {
   const [isFavourite, setIsFavourite] = useState(false);
-
+  const placeHolder = `${PUBLIC_URL}assets/vertical-placeholder.png`;
   const toggleFavourite = () => {
     const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
     const index = favourites.indexOf(id);
@@ -32,7 +32,10 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
 
   return (
     <div className='my-2'>
-      <Link to={`/movie/${id}/${formattedUrlTitle}`} className='block w-fit'>
+      <Link
+        to={`/nafilms/movie/${id}/${formattedUrlTitle}`}
+        className='block w-fit'
+      >
         <div className='relative h-[190px] w-[120px] md:h-[240px] md:w-[180px] lg:h-[270px] lg:w-[190px] 2xl:w-[180px]'>
           <img
             className='h-full w-full object-cover'
@@ -53,7 +56,7 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         <img
           onClick={toggleFavourite}
           className='absolute right-0 top-[0.5rem] w-6 cursor-pointer'
-          src={isFavourite ? '../fav.svg' : '../add-fav.svg'}
+          src={isFavourite ? 'fav.svg' : 'add-fav.svg'}
           alt='Add to favourites icon'
         />
       </div>

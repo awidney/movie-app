@@ -8,10 +8,11 @@ import { useParams } from 'react-router-dom';
 import { API_KEY } from '../global/globals';
 import actorPlaceHolder from '../assets/actor-placeholder.png';
 import { useState, useEffect } from 'react';
+import { PUBLIC_URL } from '../global/globals';
 
 function MovieInfo() {
   const { id } = useParams();
-
+  const publicURL = PUBLIC_URL;
   const [isFavourite, setIsFavourite] = useState(
     JSON.parse(localStorage.getItem('favourites') || '[]').includes(
       parseInt(id)
@@ -91,7 +92,7 @@ function MovieInfo() {
         <img
           onClick={toggleFavourite}
           className='h-8 w-8 cursor-pointer lg:h-10 lg:w-10'
-          src={isFavourite ? '../../fav.svg' : '../../add-fav.svg'}
+          src={isFavourite ? `${publicURL}fav.svg` : `${publicURL}add-fav.svg`}
           alt='Add to favorites button'
         />
       </div>

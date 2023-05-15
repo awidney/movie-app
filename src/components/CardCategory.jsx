@@ -1,7 +1,7 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import placeHolder from '../assets/vertical-placeholder.png';
+import { PUBLIC_URL } from '../global/globals';
 
 function CardCategory({
   poster,
@@ -12,7 +12,8 @@ function CardCategory({
   onToggleFavourite,
 }) {
   const [isFavourite, setIsFavourite] = useState(false);
-
+  const placeHolder = `${PUBLIC_URL}assets/vertical-placeholder.png`;
+  const publicURL = PUBLIC_URL;
   const toggleFavourite = () => {
     const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
     const index = favourites.indexOf(id);
@@ -40,7 +41,7 @@ function CardCategory({
 
   return (
     <div>
-      <Link to={`/movie/${id}/${formattedUrlTitle}`}>
+      <Link to={`/nafilms/movie/${id}/${formattedUrlTitle}`}>
         <div className='relative'>
           <img
             className='h-full w-full object-cover'
@@ -61,7 +62,7 @@ function CardCategory({
         <img
           onClick={toggleFavourite}
           className='absolute right-0 top-0 w-6 cursor-pointer'
-          src={isFavourite ? '../fav.svg' : '../add-fav.svg'}
+          src={isFavourite ? `${publicURL}fav.svg` : `${publicURL}add-fav.svg`}
           alt='Add to favourites icon'
         />
       </div>

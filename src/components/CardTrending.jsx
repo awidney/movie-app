@@ -1,17 +1,17 @@
 import RatingBar from './RatingBar';
 import { Link } from 'react-router-dom';
-import placeHolder from '../assets/horizontal-placeholder.png';
+import { PUBLIC_URL } from '../global/globals';
 
 function CardTrending({ poster, title, releaseDate, rating, id }) {
   const posterUrl = `https://image.tmdb.org/t/p/w780${poster}`;
-
+  const placeHolder = `${PUBLIC_URL}/assets/horizontal-placeholder.png`;
   const formattedUrlTitle = title
     .toLowerCase()
     .replace(/[^a-zA-Z0-9\s]/g, '') // remove non-alphanumeric characters excluding spaces
     .replace(/\s+/g, '-'); // replace spaces with dashes
 
   return (
-    <Link to={`/movie/${id}/${formattedUrlTitle}`}>
+    <Link to={`/nafilms/movie/${id}/${formattedUrlTitle}`}>
       <div className='relative my-2 inline-block w-[180px] cursor-pointer md:w-auto'>
         <div className='h-[105px] md:h-[170px] md:w-[325px]'>
           <img
