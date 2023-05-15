@@ -55,7 +55,7 @@ function Nav() {
           </>
         )}
 
-        <Link to='/'>
+        <Link to='/nafilms/'>
           <NAFilmsLogo className='w-9 md:w-11' />
         </Link>
 
