@@ -43,7 +43,7 @@ function Footer() {
             <nav>
               <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
-                  <Link to='/nafilms'>Home</Link>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li>
                   <Link to='/about'>About</Link>
