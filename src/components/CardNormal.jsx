@@ -56,7 +56,9 @@ function CardNormal({ poster, title, releaseDate, rating, id }) {
         <img
           onClick={toggleFavourite}
           className='absolute right-0 top-[0.5rem] w-6 cursor-pointer'
-          src={isFavourite ? 'fav.svg' : 'add-fav.svg'}
+          src={
+            isFavourite ? `${PUBLIC_URL}fav.svg` : `${PUBLIC_URL}add-fav.svg`
+          }
           alt='Add to favourites icon'
         />
       </div>

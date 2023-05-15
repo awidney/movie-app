@@ -16,7 +16,7 @@ function Nav() {
     e.preventDefault(); // prevent page refresh
     const searchQuery = e.target.searchQuery.value;
     if (!searchQuery) return; // if searchQuery is empty, do nothing
-    navigate(`/search?language=en-CA&query=${searchQuery}`);
+    navigate(`nafilms/search?language=en-CA&query=${searchQuery}`);
     e.target.reset(); // clear the input field after submission
   };
 

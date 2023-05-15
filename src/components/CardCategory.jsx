@@ -13,7 +13,6 @@ function CardCategory({
 }) {
   const [isFavourite, setIsFavourite] = useState(false);
   const placeHolder = `${PUBLIC_URL}assets/vertical-placeholder.png`;
-  const publicURL = PUBLIC_URL;
   const toggleFavourite = () => {
     const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
     const index = favourites.indexOf(id);
@@ -62,7 +61,9 @@ function CardCategory({
         <img
           onClick={toggleFavourite}
           className='absolute right-0 top-0 w-6 cursor-pointer'
-          src={isFavourite ? `${publicURL}fav.svg` : `${publicURL}add-fav.svg`}
+          src={
+            isFavourite ? `${PUBLIC_URL}fav.svg` : `${PUBLIC_URL}add-fav.svg`
+          }
           alt='Add to favourites icon'
         />
       </div>
