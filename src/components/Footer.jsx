@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
+  const location = useLocation();
+
+  const handleHomeLinkClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <footer className='px-4 py-8 lg:mx-auto xl:w-[67.5rem] 2xl:w-[87rem]'>
       <div className='justify-center gap-36 md:flex'>
@@ -38,7 +46,9 @@ function Footer() {
             <nav>
               <ul className='flex flex-col gap-2 lg:text-lg'>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link to='/' onClick={handleHomeLinkClick}>
+                    Home
+                  </Link>
                 </li>
                 <li>
                   <Link to='/about'>About</Link>
