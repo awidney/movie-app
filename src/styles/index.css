@@ -38,3 +38,9 @@
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  .arrow {
+    display: none;
+  }
+}

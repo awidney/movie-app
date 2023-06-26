@@ -1,11 +1,11 @@
 export function SliderLeftButton({ previous }) {
   return (
     <button
-      className='absolute left-0 top-[9.4375rem] hidden h-[271px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+      className='arrow absolute left-0 top-[6.9375rem] h-[190px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none md:top-[8.5rem] md:h-[240px] lg:top-[9.4375rem] lg:h-[271px]'
       onClick={previous}
     >
       <svg
-        className='h-full w-10 fill-transparent hover:fill-white'
+        className='h-full w-5 fill-transparent hover:fill-white md:w-7 lg:w-9'
         xmlns='http://www.w3.org/2000/svg'
         width='24'
         height='24'

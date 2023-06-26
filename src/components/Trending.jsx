@@ -108,11 +108,11 @@ function Trending() {
           ))}
         </Slider>
         <button
-          className='absolute left-0 top-[5.8125rem] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='arrow absolute left-0 top-[60px] h-[105.25px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none md:top-[93px] md:h-[170px] lg:top-[5.8125rem]'
           onClick={previous}
         >
           <svg
-            className='h-full w-10 fill-transparent hover:fill-white'
+            className='h-full w-5 fill-transparent hover:fill-white md:w-7 lg:w-9'
             xmlns='http://www.w3.org/2000/svg'
             width='24'
             height='24'
@@ -122,11 +122,11 @@ function Trending() {
           </svg>
         </button>
         <button
-          className='absolute right-0 top-[5.8125rem] hidden h-[171px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none lg:block'
+          className='arrow absolute right-0 top-[60px] h-[105.25px] -translate-y-1/2 transform bg-black bg-opacity-50 focus:outline-none md:top-[93px] md:h-[170px] lg:top-[5.8125rem]'
           onClick={next}
         >
           <svg
-            className='h-full w-10 rotate-180 fill-transparent hover:fill-white'
+            className='h-full w-5 rotate-180 fill-transparent hover:fill-white md:w-7 lg:w-9'
             xmlns='http://www.w3.org/2000/svg'
             width='24'
             height='24'
