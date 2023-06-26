@@ -19,7 +19,7 @@ function App() {
     <div className='flex h-screen flex-col'>
       <Nav />
       <ScrollToTop />
-      <main className='flex-1 px-4 lg:mx-auto lg:w-[1024px] xl:w-[67.5rem] 2xl:w-[87rem]'>
+      <main className='flex-1 px-4 lg:mx-auto lg:w-[62.9375rem] xl:w-[67.5rem] 2xl:w-[87rem]'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/movie/trending' element={<Trending />} />
